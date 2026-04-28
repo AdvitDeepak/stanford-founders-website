@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>About Us — Stanford Founders</title>
+    <link rel="stylesheet" href="static/css/styles.css">
+    <link rel="icon" href="images/logos/logo-150.png" sizes="32x32">
+    <style>
+        .about-image-wrapper {
+            position: relative;
+            margin-bottom: var(--space-lg);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            isolation: isolate;
+            -webkit-transform: translate3d(0, 0, 0);
+            cursor: pointer;
+        }
+
+        .about-image-wrapper img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.4s ease;
+        }
+
+        .about-image-wrapper:hover img {
+            transform: scale(1.02);
+        }
+
+        .about-image-info {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: var(--space-xl) var(--space-lg) var(--space-lg);
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0) 100%);
+            opacity: 0;
+            transition: opacity 0.3s ease, transform 0.3s ease;
+            transform: translateY(10px);
+        }
+
+        .about-image-wrapper:hover .about-image-info {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+    <script src="static/js/components.js"></script>
+</head>
+
+<body
+    style="background-image: linear-gradient(to bottom, rgba(17,17,17,0.7), rgba(17,17,17,0.95)), url('images/backgrounds/campus-night.jpeg'); background-size: cover; background-position: center; background-attachment: fixed; color: var(--color-parchment);">
+    <div id="header-placeholder"></div>
+
+    <main>
+        <section class="section" style="padding-bottom: 0;">
+            <div class="container hero-content"
+                style="max-width: 1000px; margin: 0 auto; text-align: center; padding-top: var(--space-lg); padding-bottom: var(--space-md);">
+                <div
+                    style="display: inline-block; background-color: rgba(255,255,255,0.1); color: var(--color-white); font-weight: 600; font-size: 0.875rem; padding: 6px 16px; border-radius: 100px; margin-bottom: var(--space-sm); border: 1px solid rgba(255,255,255,0.2); backdrop-filter: blur(4px);">
+                    About Us
+                </div>
+                <h1
+                    style="color: var(--color-white); font-size: clamp(2.5rem, 5vw, 4.5rem); line-height: 1.05; letter-spacing: -0.03em; margin-bottom: var(--space-sm); text-shadow: 0 4px 12px rgba(0,0,0,0.3);">
+                    Cultivating Innovation.</h1>
+                <p class="subhead"
+                    style="color: rgba(255,255,255,0.85); font-size: clamp(1.25rem, 2vw, 1.75rem); margin-bottom: var(--space-md); font-weight: 450; max-width: 800px; margin-left: auto; margin-right: auto;">
+                    Stanford Founders is a dynamic ecosystem connecting cross-disciplinary Stanford graduate students to
+                    foster co-founder relationships and support early-stage startup development.</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="about-image-wrapper">
+                    <img src="images/events/team-community.jpeg" alt="Stanford Founders Team Working">
+                    <div class="about-image-info">
+                        <p style="margin: 0; font-size: 1.25rem; font-weight: 500; color: var(--color-white);">An image
+                            from one of our many fireside chats!</p>
+                    </div>
+                </div>
+
+                <div class="grid grid-2" style="gap: var(--space-lg);">
+                    <div class="glass-dark"
+                        style="padding: var(--space-lg); border-radius: var(--radius-xl); box-shadow: 0 10px 30px rgba(0,0,0,0.3);">
+                        <h2 style="color: var(--color-white); font-size: 2rem; margin-bottom: var(--space-xs);">Our
+                            History</h2>
+                        <div class="divider" style="margin-bottom: var(--space-md);"></div>
+                        <p
+                            style="color: rgba(255,255,255,0.85); font-size: 1.05rem; line-height: 1.6; margin-bottom: var(--space-sm);">
+                            Stanford Founders began as a casual WhatsApp group with 10 friends to share entrepreneurial
+                            events, resources, and opportunities among friends from different graduate schools at
+                            Stanford University.</p>
+                        <p
+                            style="color: rgba(255,255,255,0.85); font-size: 1.05rem; line-height: 1.6; margin-bottom: var(--space-sm);">
+                            We noticed the difficulty Stanford graduate students faced in finding cofounders and
+                            accessing entrepreneurial resources from other schools, and this group aimed to bridge that
+                            gap.</p>
+                        <p
+                            style="color: rgba(255,255,255,0.85); font-size: 1.05rem; line-height: 1.6; margin-bottom: 0;">
+                            The group chat quickly grew from 10 to over 1,200 members, highlighting the need for such a
+                            network. We transformed this group into an official student organization, offering programs
+                            and events to cross-disciplinary Stanford graduate students to aid in their early-stage
+                            startup development.</p>
+                    </div>
+                    <div>
+                        <div class="card glass-card"
+                            style="padding: var(--space-lg); border-radius: var(--radius-xl); height: 100%; display: flex; flex-direction: column; justify-content: center;">
+                            <h3 style="color: var(--color-white); font-size: 1.75rem; margin-bottom: var(--space-sm);">
+                                Mission & Values</h3>
+                            <p
+                                style="color: rgba(255,255,255,0.85); font-size: 1.1rem; line-height: 1.6; margin-bottom: var(--space-md);">
+                                We value diversity, collaboration, and integrity in all our endeavors, fostering a
+                                supportive and dynamic ecosystem that propels entrepreneurial success.</p>
+                            <p
+                                style="color: rgba(255,255,255,0.85); font-size: 1.1rem; line-height: 1.6; margin-bottom: 0;">
+                                Our community of over 1,200 graduate student founders thrives on collaborations.
+                                Stanford Founders connects them with resources, investors, and like-minded co-founders
+                                for transformative growth.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="quote-card"
+            style="background: linear-gradient(to right, rgba(140, 21, 21, 0.85), rgba(17, 17, 17, 0.85)), url('images/events/event-dinner.jpeg') center/cover no-repeat; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+            <div class="container">
+                <p class="quote-text">Transform Your Ideas into Impact.</p>
+                <div class="divider divider-center" style="background-color: var(--color-white);"></div>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSeqes6iVUMySVnBRsVfj0NS3DglEp27nJAKCu6xW58gtR0faw/viewform"
+                    class="btn btn-secondary"
+                    style="border-color: var(--color-white); color: var(--color-white); margin-top: var(--space-md);"
+                    target="_blank">Join Our Community</a>
+            </div>
+        </section>
+    </main>
+
+    <div id="footer-placeholder"></div>
+</body>
+
+</html>
