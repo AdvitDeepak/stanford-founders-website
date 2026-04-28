@@ -1,46 +1,50 @@
-# Stanford Founders
+# Stanford Founders Website
 
-Static website for Stanford Founders - Stanford's premier graduate entrepreneurship community.
+Official website for Stanford Founders - Stanford's premier graduate entrepreneurship community.
 
-## 🚀 Quick Start
+## 🚀 Deployment Workflow
 
-This is a static HTML/CSS/JS website ready for GitHub Pages deployment.
+### Making Changes to the Live Site
 
-### View Locally
+1. **Pull the repo on your local machine**
+   ```bash
+   git clone https://github.com/AdvitDeepak/stanford-founders-website.git
+   cd stanford-founders-website
+   ```
 
-```bash
-python -m http.server 8000
-```
+2. **Make any changes**
+   - Edit HTML, CSS, JS, or images as needed
+   - Test locally by running: `python -m http.server 8000`
+   - View at `http://localhost:8000`
 
-Then open `http://localhost:8000`
+3. **Commit and push changes**
+   ```bash
+   git add .
+   git commit -m "Your commit message"
+   git push origin main
+   ```
 
-### Deploy to GitHub Pages
+4. **Deploy to live site**
+   - Navigate to [https://domains.stanford.edu/dashboard/](https://domains.stanford.edu/dashboard/)
+   - Click on **"Terminal"**
+   - Run the following commands:
+     ```bash
+     cd stanfordfounders.stanford.edu
+     git pull
+     ```
 
-1. Push this repository to GitHub
-2. Go to Settings → Pages
-3. Select `main` branch and `/ (root)` folder
-4. Save and your site will be live!
+5. **Done!** 
+   - Anything in the `stanfordfounders.stanford.edu` folder on the remote machine is what's displayed live
+   - Visit [https://stanfordfounders.stanford.edu](https://stanfordfounders.stanford.edu) to see your changes
 
-## 📁 Structure
+## � Contact Form
 
-```
-├── index.html          # Homepage
-├── about.html          # About page
-├── team.html           # Team page
-├── services.html       # Services page
-├── contact.html        # Contact page
-└── static/
-    ├── css/           # All stylesheets
-    └── js/            # All JavaScript files
-```
+The contact form on the website automatically populates a Google Spreadsheet located in the Stanford Founders shared drive:
 
-## 🎨 Features
+**Location:** `2025-2026 / Website / Contact Form Submissions`
 
-- Fully responsive design
-- Converted from WordPress with exact styling preserved
-- Fast loading static site
-- No database or server required
+Form submissions include: timestamp, first name, last name, email, and message.
 
-## 📝 License
+## �📝 License
 
 © 2026 Stanford Founders. All rights reserved.
