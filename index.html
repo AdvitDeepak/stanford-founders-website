@@ -1,381 +1,210 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Stanford Founders – We empower Stanford’s graduate founders.</title>
-    <link rel="stylesheet" href="static/css/styles.css">
-    <link rel="icon" href="images/logos/logo-150.png" sizes="32x32">
-    <style>
-        .counter-box {
-            text-align: center;
-            padding: var(--space-md);
-        }
-
-        .counter-number {
-            font-size: clamp(3rem, 5vw, 4.5rem);
-            font-weight: 800;
-            color: var(--color-cardinal);
-            line-height: 1;
-            margin-bottom: var(--space-xs);
-        }
-
-        .counter-label {
-            font-size: 1.1rem;
-            color: var(--color-steel);
-            font-weight: 500;
-        }
-
-        .testimonial-card {
-            background: var(--color-white);
-            border-radius: var(--radius-xl);
-            padding: var(--space-lg);
-            box-shadow: var(--shadow-raised);
-            border: 1px solid rgba(0, 0, 0, 0.03);
-            display: flex;
-            flex-direction: column;
-            gap: var(--space-md);
-        }
-
-        .testimonial-quote {
-            font-size: 1.125rem;
-            color: var(--color-ink);
-            font-style: italic;
-            flex-grow: 1;
-        }
-
-        .testimonial-author {
-            display: flex;
-            align-items: center;
-            gap: var(--space-sm);
-        }
-
-        .testimonial-author img {
-            width: 48px;
-            height: 48px;
-            border-radius: 50%;
-            object-fit: cover;
-        }
-
-        .testimonial-author div h4 {
-            margin: 0;
-            font-size: 1rem;
-            color: var(--color-cardinal);
-        }
-
-        .testimonial-author div p {
-            margin: 0;
-            font-size: 0.85rem;
-            color: var(--color-steel);
-        }
-    </style>
-    <script src="static/js/components.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stanford Founders | The graduate founder network at Stanford</title>
+<meta name="description" content="Stanford Founders is the graduate founder community at Stanford. 1,150+ members across seven schools. Spring 2025 Demo Day: 90 startups, 300+ investors, 1,500+ attendees.">
+<link rel="stylesheet" href="static/css/styles.css">
+<script src="static/js/components.js" defer></script>
 </head>
+<body data-page="home">
 
-<body
-    style="background-image: linear-gradient(to bottom, rgba(17,17,17,0.7), rgba(17,17,17,0.95)), url('images/backgrounds/campus-night.jpeg'); background-size: cover; background-position: center; background-attachment: fixed; color: var(--color-parchment);">
-    <div id="header-placeholder"></div>
+<div id="header-placeholder"></div>
 
-    <main>
-        <!-- Hero Section (Animated Background) -->
-        <section class="hero"
-            style="min-height: 80vh; display: flex; align-items: center; text-align: center; background: transparent;">
-            <div class="container hero-content"
-                style="max-width: 1000px; margin: 0 auto; padding-top: var(--space-lg); padding-bottom: var(--space-lg);">
-                <div style="display: flex; flex-direction: column; align-items: center; gap: var(--space-xs); margin-bottom: var(--space-sm);">
-                    <div
-                        style="display: inline-block; background-color: rgba(255,255,255,0.1); color: var(--color-white); font-weight: 600; font-size: 0.875rem; padding: 6px 16px; border-radius: 100px; border: 1px solid rgba(255,255,255,0.2); backdrop-filter: blur(4px);">
-                        Check out upcoming Demo Day! 🚀 <a href="https://luma.com/achgqxtn"
-                            target="_blank"
-                            style="margin-left: 8px; text-decoration: underline; color: var(--color-parchment);">Thursday, May 7th</a>
-                    </div>
-                    <div
-                        style="display: inline-block; background-color: rgba(255,255,255,0.1); color: var(--color-white); font-weight: 600; font-size: 0.875rem; padding: 6px 16px; border-radius: 100px; border: 1px solid rgba(255,255,255,0.2); backdrop-filter: blur(4px);">
-                        Follow the latest on our Instagram! 📸 <a href="https://www.instagram.com/stanford_founders/"
-                            target="_blank"
-                            style="margin-left: 8px; text-decoration: underline; color: var(--color-parchment);">@stanford_founders</a>
-                    </div>
-                </div>
-                <h1
-                    style="color: var(--color-white); font-size: clamp(2.5rem, 5vw, 4.5rem); line-height: 1.05; letter-spacing: -0.03em; margin-bottom: var(--space-sm); text-shadow: 0 4px 12px rgba(0,0,0,0.3);">
-                    Connect. Innovate. Transform.</h1>
-                <p class="subhead"
-                    style="color: rgba(255,255,255,0.85); font-size: clamp(1.25rem, 2vw, 1.75rem); margin-bottom: var(--space-md); font-weight: 450; max-width: 600px; margin-left: auto; margin-right: auto;">
-                    We empower Stanford’s graduate founders—the shortest path from lab to funded company.</p>
-                <div style="display: flex; gap: var(--space-sm); justify-content: center;">
-                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSeqes6iVUMySVnBRsVfj0NS3DglEp27nJAKCu6xW58gtR0faw/viewform"
-                        class="btn btn-primary"
-                        style="font-size: 1.125rem; padding: 18px 36px; border-radius: 100px; box-shadow: 0 8px 24px rgba(140,21,21,0.4);"
-                        target="_blank">Join us Today!</a>
-                </div>
-            </div>
-        </section>
+<header class="hero-photo">
+  <div class="bg" style="background-image: url('images/events/networking-portrait.jpg');"></div>
+  <div class="scrim"></div>
+  <div class="wrap">
+    <div class="eyebrow">The graduate founder network at Stanford</div>
+    <h1>Where Stanford grads <span class="accent">build</span></h1>
+    <p class="lede">
+      1,150+ graduate founders across Stanford's seven schools. The shortest path
+      from lab, classroom, or studio to a funded company.
+    </p>
+    <div class="actions">
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSeqes6iVUMySVnBRsVfj0NS3DglEp27nJAKCu6xW58gtR0faw/viewform" target="_blank" rel="noopener" class="btn on-photo">Join the community</a>
+      <a href="https://luma.com/achgqxtn" target="_blank" rel="noopener" class="btn on-photo-secondary">RSVP for Demo Day</a>
+    </div>
+  </div>
+  <div class="photo-credit">Magic Room dinner series, Spring 2026</div>
+</header>
 
-        <!-- Animated Counter Section -->
-        <section class="section glass-dark"
-            style="border-top-left-radius: 40px; border-top-right-radius: 40px; margin-top: -40px; position: relative; z-index: 10; box-shadow: 0 -20px 40px rgba(0,0,0,0.5);">
-            <div class="container">
-                <div class="grid grid-3" style="gap: var(--space-lg);">
-                    <div class="counter-box">
-                        <div class="counter-number" data-target="1150">0</div>
-                        <div class="counter-label">Graduate Members</div>
-                    </div>
-                    <div class="counter-box">
-                        <div class="counter-number" data-target="35" data-suffix="+">0</div>
-                        <div class="counter-label">Annual Events</div>
-                    </div>
-                    <div class="counter-box">
-                        <div class="counter-number" data-target="20" data-suffix="+">0</div>
-                        <div class="counter-label">Funded Startups</div>
-                    </div>
-                </div>
-            </div>
-        </section>
+<section class="stats">
+  <div class="wrap-narrow">
+    <div class="stats-grid">
+      <div class="stat">
+        <div class="num">1,150+</div>
+        <div class="label">Graduate founders<span class="source">Across seven Stanford schools</span></div>
+      </div>
+      <div class="stat">
+        <div class="num">90</div>
+        <div class="label">Startups pitched at Demo Day<span class="source">Spring 2025 · Stanford Daily</span></div>
+      </div>
+      <div class="stat">
+        <div class="num">300+</div>
+        <div class="label">Investors in the room<span class="source">Spring 2025 Demo Day</span></div>
+      </div>
+      <div class="stat">
+        <div class="num">1,500+</div>
+        <div class="label">Demo Day attendees<span class="source">Spring 2025 · Stanford Daily</span></div>
+      </div>
+    </div>
+  </div>
+</section>
 
-        <!-- Services Preview (Cards) -->
-        <section class="section glass-dark" style="padding-top: var(--space-md);">
-            <div class="container">
-                <div style="max-width: 700px; margin-bottom: var(--space-lg);">
-                    <h2 style="font-size: clamp(2.5rem, 4vw, 3.5rem); letter-spacing: -0.022em;">Tailored For
-                        Graduate Founders</h2>
-                    <p class="subhead" style="font-weight: 400;">Engage in sector-specific mixers, network with
-                        investors, and find co-founders.</p>
-                </div>
+<section class="body tinted">
+  <div class="wrap-narrow">
+    <div class="prose-grid">
+      <div class="label">History</div>
+      <div>
+        <p>Stanford Founders began as a casual WhatsApp group of ten friends sharing entrepreneurial events, resources, and opportunities across different graduate schools at Stanford.</p>
+        <p>We noticed the difficulty Stanford graduate students faced in finding cofounders and accessing entrepreneurial resources from other schools. The group aimed to bridge that gap.</p>
+        <p>The chat grew from 10 to over 1,200 members, highlighting the need for the network. We turned the group into an official student organization, offering programs and events for cross-disciplinary Stanford graduate students at the early stage of their startup development.</p>
+      </div>
+    </div>
 
-                <div class="scroll-horizontal" style="padding-top: var(--space-xs);">
-                    <div class="card glass-card scroll-item"
-                        style="padding: var(--space-md); border-radius: var(--radius-xl); transition: transform 0.2s ease, box-shadow 0.2s ease;">
-                        <h3 style="font-size: 1.5rem; margin-bottom: var(--space-xs);">Tailored Events</h3>
-                        <p style="font-size: 1rem; margin-bottom: 0;">Focused events to nurture entrepreneurial skills.
-                        </p>
-                    </div>
+    <div class="prose-grid">
+      <div class="label">Mission</div>
+      <div>
+        <p>Stanford Founders' Club is a dynamic community of cross-disciplinary Stanford graduate students.</p>
+        <p>We support members at the early stages of company-building through programming, dinners, sector mixers, and introductions across the seven Stanford graduate schools.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-                    <div class="card glass-card scroll-item"
-                        style="padding: var(--space-md); border-radius: var(--radius-xl); transition: transform 0.2s ease, box-shadow 0.2s ease;">
-                        <h3 style="font-size: 1.5rem; margin-bottom: var(--space-xs);">Co-Founder Matching</h3>
-                        <p style="font-size: 1rem; margin-bottom: 0;">Connect with like-minded co-founders to complement
-                            your startup journey.</p>
-                    </div>
+<section class="body" id="what-we-do">
+  <div class="wrap-narrow">
+    <div class="section-header">
+      <div class="eyebrow">What we do</div>
+      <h2>Built for graduate founders</h2>
+      <p>Programming, co-founder matching, sector mixers, and investor access for the early stages of company-building.</p>
+    </div>
+    <div class="pillars-photo">
 
-                    <div class="card glass-card scroll-item"
-                        style="padding: var(--space-md); border-radius: var(--radius-xl); transition: transform 0.2s ease, box-shadow 0.2s ease;">
-                        <h3 style="font-size: 1.5rem; margin-bottom: var(--space-xs);">Sector-Specific Mixers</h3>
-                        <p style="font-size: 1rem; margin-bottom: 0;">Networking events tailored to specific industry
-                            sectors.</p>
-                    </div>
+      <a class="pillar-photo" href="services.html">
+        <div class="bg" style="background-image: url('images/events/team-community.jpeg');"></div>
+        <div class="scrim"></div>
+        <div class="num">01</div>
+        <h3>Founder programming</h3>
+        <p>Firesides with operators who have shipped, from PhD spinouts to GSB-led companies. Workshops on fundraising, recruiting, and first-customer GTM.</p>
+      </a>
 
-                    <div class="card glass-card scroll-item"
-                        style="padding: var(--space-md); border-radius: var(--radius-xl); transition: transform 0.2s ease, box-shadow 0.2s ease;">
-                        <h3 style="font-size: 1.5rem; margin-bottom: var(--space-xs);">Resource Sharing</h3>
-                        <p style="font-size: 1rem; margin-bottom: 0;">Access a pool of shared resources to support your
-                            startup growth.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+      <a class="pillar-photo" href="services.html">
+        <div class="bg" style="background-image: url('images/events/magic-room-portrait.jpg');"></div>
+        <div class="scrim"></div>
+        <div class="num">02</div>
+        <h3>Co-founder matching</h3>
+        <p>Engineers, scientists, and operators meet across the seven schools. Most matches
+          start at a single dinner and end at a Y Combinator interview.</p>
+      </a>
 
-        <!-- Testimonies Section -->
-        <section class="section glass-dark" style="padding-top: var(--space-lg); padding-bottom: var(--space-md);">
-            <div class="container">
-                <div style="text-align: center; margin-bottom: var(--space-lg);">
-                    <h2 style="font-size: clamp(2.5rem, 4vw, 3.5rem);">Founder Success Stories</h2>
-                    <p class="subhead" style="font-weight: 400;">Hear from the founders who built their network with us.
-                    </p>
-                </div>
+      <a class="pillar-photo" href="services.html">
+        <div class="bg" style="background-image: url('images/events/ai-social-event.jpeg');"></div>
+        <div class="scrim"></div>
+        <div class="num">03</div>
+        <h3>Sector mixers</h3>
+        <p>Bio, climate, defense, AI infrastructure, fintech. Small-format dinners with
+          founders working on the same wedge of the market.</p>
+      </a>
 
-                <div class="scroll-horizontal" style="padding-top: var(--space-xs);">
-                    <div class="testimonial-card glass-card scroll-item">
-                        <p class="testimonial-quote">"Stanford Founders provided exactly the interdisciplinary
-                            environment I needed to find my technical co-founder. The events were directly responsible
-                            for launching our startup."</p>
-                        <div class="testimonial-author">
-                            <img src="images/headshots/lukas.jpg" alt="Lukas Klaiber"
-                                onerror="this.src='images/logos/logo-new-transparent.png'">
-                            <div>
-                                <h4>Lukas Klaiber</h4>
-                                <p>Alumni Founder</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="testimonial-card glass-card scroll-item">
-                        <p class="testimonial-quote">"The level of support and resources available within this community
-                            is unmatched. From investor networking to peer-to-peer advising, SFS accelerated our
-                            progress by months."</p>
-                        <div class="testimonial-author">
-                            <img src="images/headshots/xinmeng.jpeg" alt="Xinmeng Zeng"
-                                onerror="this.src='images/logos/logo-new-transparent.png'">
-                            <div>
-                                <h4>Xinmeng Zeng</h4>
-                                <p>Alumni Founder</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="testimonial-card glass-card scroll-item">
-                        <p class="testimonial-quote">"Being a part of this organization wasn't just about networking—it
-                            was about finding a true community of builders. The Demo Day completely changed our
-                            trajectory."</p>
-                        <div class="testimonial-author">
-                            <img src="images/headshots/johnny.jpeg" alt="Johnny Chang"
-                                onerror="this.src='images/logos/logo-new-transparent.png'">
-                            <div>
-                                <h4>Johnny Chang</h4>
-                                <p>Alumni Founder</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="testimonial-card glass-card scroll-item">
-                        <p class="testimonial-quote">"There is no better place on campus for graduate students to
-                            transition from an idea in a lab to a fully funded company. The co-founder matching alone is
-                            invaluable."</p>
-                        <div class="testimonial-author">
-                            <img src="images/headshots/pricilla.jpeg" alt="Priscilla Russo"
-                                onerror="this.src='images/logos/logo-new-transparent.png'">
-                            <div>
-                                <h4>Priscilla Russo</h4>
-                                <p>Alumni Founder</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+      <a class="pillar-photo" href="services.html">
+        <div class="bg" style="background-image: url('images/events/demo-day-panel.jpg');"></div>
+        <div class="scrim"></div>
+        <div class="num">04</div>
+        <h3>Investor access</h3>
+        <p>Demo Day puts 90 startups in front of 300+ investors in a single afternoon.
+          Direct introductions to partners at Unusual, Pear, NEA, a16z, DCM, and BlackRock.</p>
+      </a>
 
-        <!-- Values Section -->
-        <section class="section glass-dark" style="padding-top: var(--space-lg);">
-            <div class="container">
-                <div style="text-align: center; margin-bottom: var(--space-md);">
-                    <h2 style="font-size: clamp(2.5rem, 4vw, 3.5rem);">Our Core Values</h2>
-                    <p class="subhead" style="font-weight: 400;">The foundation of everything we build.</p>
-                </div>
-                <div class="scroll-horizontal" style="padding-top: var(--space-xs);">
-                    <div class="card hover-lift glass-card scroll-item"
-                        style="padding: var(--space-md); text-align: center; border-radius: var(--radius-xl);">
-                        <div
-                            style="width: 56px; height: 56px; background-color: rgba(255,255,255,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto var(--space-sm); border: 1px solid rgba(255,255,255,0.2);">
-                            <span style="font-size: 1.25rem;">🤝</span>
-                        </div>
-                        <h3 style="margin-bottom: var(--space-xs); font-size: 1.5rem;">Supportive</h3>
-                        <p style="font-size: 0.95rem;">We believe in peer-support. We provide an ecosystem where diverse
-                            talents collaborate to turn ideas into reality.</p>
-                    </div>
-                    <div class="card hover-lift glass-card scroll-item"
-                        style="padding: var(--space-md); text-align: center; border-radius: var(--radius-xl);">
-                        <div
-                            style="width: 56px; height: 56px; background-color: rgba(255,255,255,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto var(--space-sm); border: 1px solid rgba(255,255,255,0.2);">
-                            <span style="font-size: 1.25rem;">🌐</span>
-                        </div>
-                        <h3 style="margin-bottom: var(--space-xs); font-size: 1.5rem;">Interdisciplinary</h3>
-                        <p style="font-size: 0.95rem;">We believe in Interdisciplinary Innovation. True impact arises
-                            from cross-industry collaboration.</p>
-                    </div>
-                    <div class="card hover-lift glass-card scroll-item"
-                        style="padding: var(--space-md); text-align: center; border-radius: var(--radius-xl);">
-                        <div
-                            style="width: 56px; height: 56px; background-color: rgba(255,255,255,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto var(--space-sm); border: 1px solid rgba(255,255,255,0.2);">
-                            <span style="font-size: 1.25rem;">🛡️</span>
-                        </div>
-                        <h3 style="margin-bottom: var(--space-xs); font-size: 1.5rem;">Integrity</h3>
-                        <p style="font-size: 0.95rem;">We believe in integrity. We uphold the highest ethical standards
-                            in all activities and interactions.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+    </div>
+  </div>
+</section>
 
-        <!-- Transform CTA -->
-        <section class="section text-center" style="background-color: var(--color-ink); color: var(--color-white);">
-            <div class="container" style="max-width: 800px;">
-                <h2 style="color: var(--color-white); font-size: clamp(2.5rem, 4vw, 3.5rem);">Transform Your Ideas into
-                    Impactful Startups</h2>
-                <p
-                    style="color: var(--color-parchment); font-size: 1.25rem; font-weight: 400; margin-bottom: var(--space-md); opacity: 0.8;">
-                    Connect with Stanford Founders to kickstart your entrepreneurial journey.</p>
-                <a href="https://docs.google.com/forms/d/e/1FAIpQLSeqes6iVUMySVnBRsVfj0NS3DglEp27nJAKCu6xW58gtR0faw/viewform"
-                    class="btn btn-primary" style="font-size: 1.125rem; padding: 18px 36px; border-radius: 100px;"
-                    target="_blank">Join Now</a>
-            </div>
-        </section>
-    </main>
+<section class="body tinted">
+  <div class="wrap-narrow">
+    <div class="section-header">
+      <div class="eyebrow">Founder voices</div>
+      <h2>Members on the network</h2>
+      <p>Four graduate founders on what the community has been for them.</p>
+    </div>
+    <div class="voices-photo">
 
-    <div id="footer-placeholder"></div>
+      <article class="voice-photo">
+        <p class="quote">Stanford Founders provided exactly the interdisciplinary
+          environment I needed to find my technical co-founder.</p>
+        <div class="attr">
+          <img class="portrait" src="images/headshots/lukas.jpg" alt="Lukas Klaiber">
+          <div class="who">
+            <div class="name">Lukas Klaiber</div>
+            <div class="role">Former Student Advisor</div>
+          </div>
+        </div>
+      </article>
 
-    <!-- Interactive Scripts -->
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            // Animated Counters
-            const counters = document.querySelectorAll(".counter-number");
+      <article class="voice-photo">
+        <p class="quote">The level of support and resources available within this
+          community is unmatched on campus.</p>
+        <div class="attr">
+          <img class="portrait" src="images/headshots/xinmeng.jpeg" alt="Xinmeng Zeng">
+          <div class="who">
+            <div class="name">Xinmeng Zeng</div>
+            <div class="role">Former VP of Finance</div>
+          </div>
+        </div>
+      </article>
 
-            const animateCounters = () => {
-                let startTimestamp = null;
-                const duration = 2000;
+      <article class="voice-photo">
+        <p class="quote">Being part of this organization wasn't just about networking. It was about community.</p>
+        <div class="attr">
+          <img class="portrait" src="images/headshots/johnny.jpeg" alt="Johnny Chang">
+          <div class="who">
+            <div class="name">Johnny Chang</div>
+            <div class="role">Former President</div>
+          </div>
+        </div>
+      </article>
 
-                const step = (timestamp) => {
-                    if (!startTimestamp) startTimestamp = timestamp;
-                    const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+      <article class="voice-photo">
+        <p class="quote">There is no better place on campus for graduate students to
+          go from idea to funded company.</p>
+        <div class="attr">
+          <img class="portrait" src="images/headshots/pricilla.jpeg" alt="Priscilla Russo">
+          <div class="who">
+            <div class="name">Priscilla Russo</div>
+            <div class="role">Former Co-VP of Community Initiatives</div>
+          </div>
+        </div>
+      </article>
 
-                    counters.forEach(counter => {
-                        const target = +counter.getAttribute("data-target");
-                        const suffix = counter.getAttribute("data-suffix") || "";
-                        counter.innerText = Math.floor(progress * target).toLocaleString() + suffix;
-                    });
+    </div>
+  </div>
+</section>
 
-                    if (progress < 1) {
-                        window.requestAnimationFrame(step);
-                    } else {
-                        counters.forEach(counter => {
-                            const target = +counter.getAttribute("data-target");
-                            const suffix = counter.getAttribute("data-suffix") || "";
-                            counter.innerText = target.toLocaleString() + suffix;
-                        });
-                    }
-                };
+<section class="body tinted">
+  <div class="wrap-narrow">
+    <div class="section-header">
+      <h2>Where Stanford Founders fits</h2>
+    </div>
+    <div class="principles">
+      <div class="principle">
+        <h3>Where We Fit</h3>
+        <p>Stanford has plenty of entrepreneurship infrastructure, including StartX, GSB E-Club, BASES, ASES, STVP, and more. Stanford Founders tries to help early, when graduate students are transitioning from research to startup and seeking a new community.</p>
+      </div>
+      <div class="principle">
+        <h3>Values</h3>
+        <p>We value diversity, collaboration, and integrity in all our endeavors, fostering a supportive and dynamic ecosystem that propels entrepreneurial success.</p>
+      </div>
+      <div class="principle">
+        <h3>Community</h3>
+        <p>Our community of over 1,200 graduate student founders thrive by collaborating. Stanford Founders connects them with resources, investors, and like-minded co-founders across every school.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-                window.requestAnimationFrame(step);
-            };
+<div id="footer-placeholder"></div>
 
-            let hasAnimated = false;
-            const observer = new IntersectionObserver((entries, obs) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting && !hasAnimated) {
-                        hasAnimated = true;
-                        animateCounters();
-                        obs.unobserve(entry.target);
-                    }
-                });
-            }, { threshold: 0.5 });
-
-            if (counters.length > 0) {
-                observer.observe(counters[0]);
-            }
-
-            // Auto Scrolling Carousels
-            const carousels = document.querySelectorAll('.scroll-horizontal');
-            carousels.forEach((carousel, index) => {
-                // Duplicate items for infinite scroll effect
-                carousel.innerHTML += carousel.innerHTML;
-
-                // Testimonials (2nd carousel) scrolls opposite direction
-                const isTestimonials = index === 1;
-                
-                const scrollStep = () => {
-                    if (isTestimonials) {
-                        carousel.scrollLeft -= 1;
-                        if (carousel.scrollLeft <= 0) {
-                            carousel.scrollLeft = carousel.scrollWidth / 2;
-                        }
-                    } else {
-                        carousel.scrollLeft += 1;
-                        if (carousel.scrollLeft >= carousel.scrollWidth / 2) {
-                            carousel.scrollLeft = 0;
-                        }
-                    }
-                    requestAnimationFrame(scrollStep);
-                };
-                requestAnimationFrame(scrollStep);
-            });
-        });
-    </script>
 </body>
-
 </html>

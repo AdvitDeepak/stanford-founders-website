@@ -1,332 +1,247 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Team — Stanford Founders</title>
-    <link rel="stylesheet" href="static/css/styles.css">
-    <link rel="icon" href="images/logos/logo-150.png" sizes="32x32">
-    <style>
-        body {
-            background-color: var(--color-parchment);
-        }
-
-        .team-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: var(--space-lg);
-        }
-
-        .team-member {
-            position: relative;
-            border-radius: var(--radius-xl);
-            overflow: hidden;
-            aspect-ratio: 4/5;
-            box-shadow: var(--shadow-raised);
-            transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.4s ease;
-            cursor: pointer;
-            background-color: #000;
-            border: none;
-            -webkit-backface-visibility: hidden;
-            -webkit-transform: translate3d(0, 0, 0);
-            isolation: isolate;
-        }
-
-        .team-member:hover {
-            transform: translateY(-8px);
-            box-shadow: var(--shadow-elevated);
-        }
-
-        .team-member img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.6s cubic-bezier(0.25, 0.8, 0.25, 1);
-        }
-
-        .team-member:hover img {
-            transform: scale(1.05);
-        }
-
-        .team-member-lead {
-            transform: scale(1.1);
-            z-index: 2;
-            border: 2px solid var(--color-cardinal);
-            box-shadow: 0 8px 30px rgba(140, 21, 21, 0.3);
-        }
-
-        .team-member-lead:hover {
-            transform: scale(1.1) translateY(-8px);
-            box-shadow: 0 16px 40px rgba(140, 21, 21, 0.4);
-        }
-
-        .team-info {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            padding: var(--space-xl) var(--space-md) var(--space-md);
-            background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0) 100%);
-            color: var(--color-white);
-        }
-
-        .team-info p {
-            margin: 0;
-            opacity: 0;
-            max-height: 0;
-            overflow: hidden;
-            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-        }
-
-        .team-member:hover .team-info p {
-            opacity: 1;
-            max-height: 24px;
-            margin-top: 4px;
-        }
-
-        .team-info h3 {
-            margin: 0;
-            font-size: 1.75rem;
-            color: var(--color-white);
-            letter-spacing: -0.02em;
-            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-        }
-    </style>
-    <script src="static/js/components.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Team | Stanford Founders</title>
+<meta name="description" content="The graduate students leading Stanford Founders, plus the alumni who built it.">
+<link rel="stylesheet" href="static/css/styles.css">
+<script src="static/js/components.js" defer></script>
 </head>
+<body data-page="team">
 
-<body
-    style="background-image: linear-gradient(to bottom, rgba(17,17,17,0.7), rgba(17,17,17,0.95)), url('images/backgrounds/campus-night.jpeg'); background-size: cover; background-position: center; background-attachment: fixed; color: var(--color-parchment);">
-    <div id="header-placeholder"></div>
+<div id="header-placeholder"></div>
 
-    <main>
-        <section class="section" style="padding-top: var(--space-lg);">
-            <div class="container">
-                <div style="text-align: center; margin-bottom: var(--space-lg);">
-                    <div
-                        style="display: inline-block; background-color: rgba(255,255,255,0.1); color: var(--color-white); font-weight: 600; font-size: 0.875rem; padding: 6px 16px; border-radius: 100px; margin-bottom: var(--space-sm); border: 1px solid rgba(255,255,255,0.2); backdrop-filter: blur(4px);">
-                        Our Team
-                    </div>
-                    <h1 style="font-size: clamp(3rem, 5vw, 4rem); letter-spacing: -0.03em; color: var(--color-white);">Meet Our Team.</h1>
-                </div>
+<header class="page-hero">
+  <div class="bg" style="background-image: url('images/events/demo-team-group.jpg');"></div>
+  <div class="scrim"></div>
+  <div class="wrap">
+    <div class="eyebrow">Team</div>
+    <h1>Meet the team</h1>
+  </div>
+</header>
 
-                <div class="team-grid">
-                    <div class="team-member team-member-lead">
-                        <img src="images/headshots/jenny-ji.jpg" alt="Jenny Ji"
-                            onerror="this.src='images/logos/logo-150.png'">
-                        <div class="team-info">
-                            <h3>Jenny Ji</h3>
-                            <p style="color: var(--color-parchment); font-size: 0.9rem;">President</p>
-                        </div>
-                    </div>
-                    <div class="team-member">
-                        <img src="images/headshots/chinat.png" alt="Chinat Yu"
-                            onerror="this.src='images/logos/logo-150.png'">
-                        <div class="team-info">
-                            <h3>Chinat Yu</h3>
-                            <p style="color: var(--color-parchment); font-size: 0.9rem;">VP of Education</p>
-                        </div>
-                    </div>
-                    <div class="team-member">
-                        <img src="images/headshots/artur.jpeg" alt="Artur Muradiants"
-                            onerror="this.src='images/logos/logo-150.png'">
-                        <div class="team-info">
-                            <h3>Artur Muradiants</h3>
-                            <p style="color: var(--color-parchment); font-size: 0.9rem;">VP of Finance</p>
-                        </div>
-                    </div>
-                    <div class="team-member">
-                        <img src="images/headshots/coco.jpeg" alt="Coco Xu"
-                            onerror="this.src='images/logos/logo-150.png'">
-                        <div class="team-info">
-                            <h3>Coco Xu</h3>
-                            <p style="color: var(--color-parchment); font-size: 0.9rem;">Co-VP of AI</p>
-                        </div>
-                    </div>
-                    <div class="team-member">
-                        <img src="images/headshots/deonna.jpeg" alt="Deonna Owens"
-                            onerror="this.src='images/logos/logo-150.png'">
-                        <div class="team-info">
-                            <h3>Deonna Owens</h3>
-                            <p style="color: var(--color-parchment); font-size: 0.9rem;">Co-VP of AI</p>
-                        </div>
-                    </div>
-                    <div class="team-member">
-                        <img src="images/headshots/advit.jpg" alt="Advit Deepak"
-                            onerror="this.src='images/logos/logo-150.png'">
-                        <div class="team-info">
-                            <h3>Advit Deepak</h3>
-                            <p style="color: var(--color-parchment); font-size: 0.9rem;">Co-VP of AI</p>
-                        </div>
-                    </div>
-                    <div class="team-member">
-                        <img src="images/headshots/yash.jpg" alt="Yash Jain"
-                            onerror="this.src='images/logos/logo-150.png'">
-                        <div class="team-info">
-                            <h3>Yash Jain</h3>
-                            <p style="color: var(--color-parchment); font-size: 0.9rem;">VP of Fintech</p>
-                        </div>
-                    </div>
-                    <div class="team-member">
-                        <img src="images/headshots/francesco.jpeg" alt="Francesco Marchioni"
-                            onerror="this.src='images/logos/logo-150.png'">
-                        <div class="team-info">
-                            <h3>Francesco Marchioni</h3>
-                            <p style="color: var(--color-parchment); font-size: 0.9rem;">VP of Aerospace & Defense</p>
-                        </div>
-                    </div>
-                    <div class="team-member">
-                        <img src="images/headshots/kristi.jpg" alt="Kristi Sun"
-                            onerror="this.src='images/logos/logo-150.png'">
-                        <div class="team-info">
-                            <h3>Kristi Sun</h3>
-                            <p style="color: var(--color-parchment); font-size: 0.9rem;">VP of Health</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+<section class="body team-section">
+  <div class="wrap">
+    <h2 class="subgroup">Officers</h2>
+    <div class="team-grid">
 
-        <section class="section glass-dark"
-            style="border-top-left-radius: 40px; border-top-right-radius: 40px; padding-top: var(--space-lg); margin-top: var(--space-md); box-shadow: 0 -20px 40px rgba(0,0,0,0.5);">
-            <div class="container">
-                <div style="text-align: center; margin-bottom: var(--space-xl);">
-                    <h2 style="font-size: clamp(2.5rem, 4vw, 3.5rem); letter-spacing: -0.03em;">Meet Our Alumni</h2>
-                </div>
+      <article class="team-card">
+        <div class="photo-block"><img src="images/headshots/jenny-ji.jpg" alt="Jenny Ji"></div>
+        <div class="info">
+          <div class="name">Jenny Ji</div>
+          <div class="role">President</div>
+        </div>
+      </article>
 
-                <div class="team-grid">
-                    <div class="team-member">
-                        <img src="images/headshots/johnny.jpeg" alt="Johnny Chang"
-                            onerror="this.src='images/logos/logo-150.png'">
-                        <div class="team-info">
-                            <h3>Johnny Chang</h3>
-                            <p style="color: var(--color-parchment); font-size: 0.9rem;">Former President</p>
-                        </div>
-                    </div>
-                    <div class="team-member">
-                        <img src="images/headshots/hunter.jpg" alt="Hunter Zhang"
-                            onerror="this.src='images/logos/logo-150.png'">
-                        <div class="team-info">
-                            <h3>Hunter Zhang</h3>
-                            <p style="color: var(--color-parchment); font-size: 0.9rem;">Former Co-President</p>
-                        </div>
-                    </div>
-                    <div class="team-member">
-                        <img src="images/headshots/lukas.jpg" alt="Lukas Klaiber"
-                            onerror="this.src='images/logos/logo-150.png'">
-                        <div class="team-info">
-                            <h3>Lukas Klaiber</h3>
-                            <p style="color: var(--color-parchment); font-size: 0.9rem;">Former Student Advisor</p>
-                        </div>
-                    </div>
-                    <div class="team-member">
-                        <img src="images/headshots/xinmeng.jpeg" alt="Xinmeng Zeng"
-                            onerror="this.src='images/logos/logo-150.png'">
-                        <div class="team-info">
-                            <h3>Xinmeng Zeng</h3>
-                            <p style="color: var(--color-parchment); font-size: 0.9rem;">Former VP of Finance</p>
-                        </div>
-                    </div>
-                    <div class="team-member">
-                        <img src="images/headshots/pricilla.jpeg" alt="Priscilla Russo"
-                            onerror="this.src='images/logos/logo-150.png'">
-                        <div class="team-info">
-                            <h3>Priscilla Russo</h3>
-                            <p style="color: var(--color-parchment); font-size: 0.9rem;">Former Co-VP of Community
-                                Initiatives</p>
-                        </div>
-                    </div>
-                    <div class="team-member">
-                        <img src="images/headshots/mattia.jpeg" alt="Mattia Mauro"
-                            onerror="this.src='images/logos/logo-150.png'">
-                        <div class="team-info">
-                            <h3>Mattia Mauro</h3>
-                            <p style="color: var(--color-parchment); font-size: 0.9rem;">Former Co-VP of Community
-                                Initiatives</p>
-                        </div>
-                    </div>
-                    <div class="team-member">
-                        <img src="images/headshots/angelina.jpeg" alt="Angelina You"
-                            onerror="this.src='images/logos/logo-150.png'">
-                        <div class="team-info">
-                            <h3>Angelina You</h3>
-                            <p style="color: var(--color-parchment); font-size: 0.9rem;">Former Co-VP of AI</p>
-                        </div>
-                    </div>
-                    <div class="team-member">
-                        <img src="images/headshots/aditri.jpeg" alt="Aditri Bhagirath"
-                            onerror="this.src='images/logos/logo-150.png'">
-                        <div class="team-info">
-                            <h3>Aditri Bhagirath</h3>
-                            <p style="color: var(--color-parchment); font-size: 0.9rem;">Former Co-VP of AI</p>
-                        </div>
-                    </div>
-                    <div class="team-member">
-                        <img src="images/headshots/rohan.jpeg" alt="Rohan Parekh"
-                            onerror="this.src='images/logos/logo-150.png'">
-                        <div class="team-info">
-                            <h3>Rohan Parekh</h3>
-                            <p style="color: var(--color-parchment); font-size: 0.9rem;">Former VP of Energy &
-                                Sustainability</p>
-                        </div>
-                    </div>
-                    <div class="team-member">
-                        <img src="images/headshots/hatidje.jpeg" alt="Hatidje Ablyatifova"
-                            onerror="this.src='images/logos/logo-150.png'">
-                        <div class="team-info">
-                            <h3>Hatidje Ablyatifova</h3>
-                            <p style="color: var(--color-parchment); font-size: 0.9rem;">Former Officer</p>
-                        </div>
-                    </div>
-                    <div class="team-member">
-                        <img src="images/headshots/casper.jpeg" alt="Casper Lin"
-                            onerror="this.src='images/logos/logo-150.png'">
-                        <div class="team-info">
-                            <h3>Casper Lin</h3>
-                            <p style="color: var(--color-parchment); font-size: 0.9rem;">Former Officer</p>
-                        </div>
-                    </div>
-                    <div class="team-member">
-                        <img src="images/headshots/alexandra.jpeg" alt="Alexandra Argo"
-                            onerror="this.src='images/logos/logo-150.png'">
-                        <div class="team-info">
-                            <h3>Alexandra Argo</h3>
-                            <p style="color: var(--color-parchment); font-size: 0.9rem;">Former Officer</p>
-                        </div>
-                    </div>
-                    <div class="team-member">
-                        <img src="images/headshots/chris.jpeg" alt="Chris Bradbury"
-                            onerror="this.src='images/logos/logo-150.png'">
-                        <div class="team-info">
-                            <h3>Chris Bradbury</h3>
-                            <p style="color: var(--color-parchment); font-size: 0.9rem;">Former VP of Healthcare</p>
-                        </div>
-                    </div>
-                    <div class="team-member">
-                        <img src="images/headshots/sophie.jpeg" alt="Sophie Ren"
-                            onerror="this.src='images/logos/logo-150.png'">
-                        <div class="team-info">
-                            <h3>Sophie Ren</h3>
-                            <p style="color: var(--color-parchment); font-size: 0.9rem;">Former Chief Startup Growth
-                                Officer</p>
-                        </div>
-                    </div>
-                    <div class="team-member">
-                        <img src="images/headshots/sam.jpeg" alt="Sam Xiao"
-                            onerror="this.src='images/logos/logo-150.png'">
-                        <div class="team-info">
-                            <h3>Sam Xiao</h3>
-                            <p style="color: var(--color-parchment); font-size: 0.9rem;">Former Co-VP of Energy &
-                                Sustainability</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
+      <article class="team-card">
+        <div class="photo-block"><img src="images/headshots/chinat.png" alt="Chinat Yu"></div>
+        <div class="info">
+          <div class="name">Chinat Yu</div>
+          <div class="role">VP of Education</div>
+        </div>
+      </article>
 
-    <div id="footer-placeholder"></div>
+      <article class="team-card">
+        <div class="photo-block"><img src="images/headshots/artur.jpeg" alt="Artur Muradiants"></div>
+        <div class="info">
+          <div class="name">Artur Muradiants</div>
+          <div class="role">VP of Finance</div>
+        </div>
+      </article>
+
+      <article class="team-card">
+        <div class="photo-block"><img src="images/headshots/coco.jpeg" alt="Coco Xu"></div>
+        <div class="info">
+          <div class="name">Coco Xu</div>
+          <div class="role">Co-VP of AI</div>
+        </div>
+      </article>
+
+      <article class="team-card">
+        <div class="photo-block"><img src="images/headshots/deonna.jpeg" alt="Deonna Owens"></div>
+        <div class="info">
+          <div class="name">Deonna Owens</div>
+          <div class="role">Co-VP of AI</div>
+        </div>
+      </article>
+
+      <article class="team-card">
+        <div class="photo-block"><img src="images/headshots/advit.jpg" alt="Advit Deepak"></div>
+        <div class="info">
+          <div class="name">Advit Deepak</div>
+          <div class="role">Co-VP of AI</div>
+        </div>
+      </article>
+
+      <article class="team-card">
+        <div class="photo-block"><img src="images/headshots/yash.jpg" alt="Yash Jain"></div>
+        <div class="info">
+          <div class="name">Yash Jain</div>
+          <div class="role">VP of Fintech</div>
+        </div>
+      </article>
+
+      <article class="team-card">
+        <div class="photo-block"><img src="images/headshots/francesco.jpeg" alt="Francesco Marchioni"></div>
+        <div class="info">
+          <div class="name">Francesco Marchioni</div>
+          <div class="role">VP of Aerospace &amp; Defense</div>
+        </div>
+      </article>
+
+      <article class="team-card">
+        <div class="photo-block"><img src="images/headshots/kristi.jpg" alt="Kristi Sun"></div>
+        <div class="info">
+          <div class="name">Kristi Sun</div>
+          <div class="role">VP of Health</div>
+        </div>
+      </article>
+
+    </div>
+
+    <h2 class="subgroup">Meet our alumni</h2>
+    <div class="team-grid compact">
+
+      <article class="team-card">
+        <div class="photo-block"><img src="images/headshots/johnny.jpeg" alt="Johnny Chang"></div>
+        <div class="info">
+          <div class="name">Johnny Chang</div>
+          <div class="role">Former President</div>
+        </div>
+      </article>
+
+      <article class="team-card">
+        <div class="photo-block"><img src="images/headshots/hunter.jpg" alt="Hunter Zhang"></div>
+        <div class="info">
+          <div class="name">Hunter Zhang</div>
+          <div class="role">Former Co-President</div>
+        </div>
+      </article>
+
+      <article class="team-card">
+        <div class="photo-block"><img src="images/headshots/lukas.jpg" alt="Lukas Klaiber"></div>
+        <div class="info">
+          <div class="name">Lukas Klaiber</div>
+          <div class="role">Former Student Advisor</div>
+        </div>
+      </article>
+
+      <article class="team-card">
+        <div class="photo-block"><img src="images/headshots/xinmeng.jpeg" alt="Xinmeng Zeng"></div>
+        <div class="info">
+          <div class="name">Xinmeng Zeng</div>
+          <div class="role">Former VP of Finance</div>
+        </div>
+      </article>
+
+      <article class="team-card">
+        <div class="photo-block"><img src="images/headshots/pricilla.jpeg" alt="Priscilla Russo"></div>
+        <div class="info">
+          <div class="name">Priscilla Russo</div>
+          <div class="role">Former Co-VP of Community Initiatives</div>
+        </div>
+      </article>
+
+      <article class="team-card">
+        <div class="photo-block"><img src="images/headshots/mattia.jpeg" alt="Mattia Mauro"></div>
+        <div class="info">
+          <div class="name">Mattia Mauro</div>
+          <div class="role">Former Co-VP of Community Initiatives</div>
+        </div>
+      </article>
+
+      <article class="team-card">
+        <div class="photo-block"><img src="images/headshots/angelina.jpeg" alt="Angelina You"></div>
+        <div class="info">
+          <div class="name">Angelina You</div>
+          <div class="role">Former Co-VP of AI</div>
+        </div>
+      </article>
+
+      <article class="team-card">
+        <div class="photo-block"><img src="images/headshots/aditri.jpeg" alt="Aditri Bhagirath"></div>
+        <div class="info">
+          <div class="name">Aditri Bhagirath</div>
+          <div class="role">Former Co-VP of AI</div>
+        </div>
+      </article>
+
+      <article class="team-card">
+        <div class="photo-block"><img src="images/headshots/rohan.jpeg" alt="Rohan Parekh"></div>
+        <div class="info">
+          <div class="name">Rohan Parekh</div>
+          <div class="role">Former VP of Energy &amp; Sustainability</div>
+        </div>
+      </article>
+
+      <article class="team-card">
+        <div class="photo-block"><img src="images/headshots/hatidje.jpeg" alt="Hatidje Ablyatifova"></div>
+        <div class="info">
+          <div class="name">Hatidje Ablyatifova</div>
+          <div class="role">Former Officer</div>
+        </div>
+      </article>
+
+      <article class="team-card">
+        <div class="photo-block"><img src="images/headshots/casper.jpeg" alt="Casper Lin"></div>
+        <div class="info">
+          <div class="name">Casper Lin</div>
+          <div class="role">Former Officer</div>
+        </div>
+      </article>
+
+      <article class="team-card">
+        <div class="photo-block"><img src="images/headshots/alexandra.jpeg" alt="Alexandra Argo"></div>
+        <div class="info">
+          <div class="name">Alexandra Argo</div>
+          <div class="role">Former Officer</div>
+        </div>
+      </article>
+
+      <article class="team-card">
+        <div class="photo-block"><img src="images/headshots/chris.jpeg" alt="Chris Bradbury"></div>
+        <div class="info">
+          <div class="name">Chris Bradbury</div>
+          <div class="role">Former VP of Healthcare</div>
+        </div>
+      </article>
+
+      <article class="team-card">
+        <div class="photo-block"><img src="images/headshots/sophie.jpeg" alt="Sophie Ren"></div>
+        <div class="info">
+          <div class="name">Sophie Ren</div>
+          <div class="role">Former Chief Startup Growth Officer</div>
+        </div>
+      </article>
+
+      <article class="team-card">
+        <div class="photo-block"><img src="images/headshots/sam.jpeg" alt="Sam Xiao"></div>
+        <div class="info">
+          <div class="name">Sam Xiao</div>
+          <div class="role">Former Co-VP of Energy &amp; Sustainability</div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<section class="final-cta">
+  <div class="bg" style="background-image: url('images/events/magic-room-portrait.jpg');"></div>
+  <div class="scrim"></div>
+  <div class="wrap-narrow">
+    <div class="eyebrow">Get involved</div>
+    <h2>Run something with us</h2>
+    <p>Officer applications open at the start of each academic year. Reach out anytime.</p>
+    <div class="actions">
+      <a href="contact.html" class="btn on-cardinal">Get in touch</a>
+      <a href="services.html" class="btn on-cardinal-secondary">See what we do</a>
+    </div>
+  </div>
+</section>
+
+<div id="footer-placeholder"></div>
+
 </body>
-
 </html>

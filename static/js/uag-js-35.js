@@ -1,4 +1,0 @@
-document.addEventListener("DOMContentLoaded", function(){ window.addEventListener("DOMContentLoaded", function(){
-	UAGBForms.init( {"block_id":"5ccad004","reCaptchaEnable":false,"reCaptchaType":"v2","reCaptchaSiteKeyV2":"","reCaptchaSiteKeyV3":"","afterSubmitToEmail":"jennyji@stanford.edu","afterSubmitCcEmail":"cjohnny@stanford.edu","afterSubmitBccEmail":"","afterSubmitEmailSubject":"Form Submission from Stanford Founders Landing Page","sendAfterSubmitEmail":true,"confirmationType":"url","hidereCaptchaBatch":false,"captchaMessage":"Please fill up the above captcha.","confirmationUrl":"https:\/\/stanfordfounders.stanford.edu\/thank-you-for-contacting-us\/"}, '.uagb-block-5ccad004', 35 );
-});
- });
