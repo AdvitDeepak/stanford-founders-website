@@ -7,11 +7,9 @@
 <meta name="description" content="Reach out to Stanford Founders. Membership applications, sponsor inquiries, speaker requests, press.">
 <link rel="stylesheet" href="static/css/styles.css">
 <script>
-  // Apps Script web app endpoint owned by Advit Deepak (per Instructions.pdf,
-  // section "Contact Form Integration"). Submissions append rows to the
-  // shared "Contact Form Submissions" Sheet. To migrate, deploy a new
-  // Apps Script web app and replace the URL below.
-  window.SFS_FORM_ENDPOINT = 'https://script.google.com/macros/s/AKfycbwXJcHdKMc2tqan-EB0M_MIHWRmNrghI8qbAWoS2syckAGLValMl0Y8r60lF1bQ0efP/exec';
+  // Contact form posts to the club's intake inbox (stanford-founders-internal-dashboard,
+  // POST /api/contact). Submissions show up as conversations the team replies to from the app.
+  window.SFS_FORM_ENDPOINT = 'https://www.stanfordfoundersclub.com/api/contact';
 </script>
 <script src="static/js/components.js" defer></script>
 </head>
@@ -32,6 +30,18 @@
     <div class="contact-grid">
 
       <div class="contact-info">
+        <h3>Reach us</h3>
+        <p>Email
+          <a href="mailto:hello@intake.stanfordfoundersclub.com">hello@intake.stanfordfoundersclub.com</a><br>
+          Text or WhatsApp <a href="tel:+18884333195">(888) 433-3195</a> &mdash;
+          <a href="https://wa.me/18884333195" target="_blank" rel="noopener">open in WhatsApp</a></p>
+        <p>Stay in the loop: join the
+          <a href="https://mailman.stanford.edu/mailman/listinfo/stanfordfoundersannouncement" target="_blank" rel="noopener">announcement mailing list</a>,
+          follow our <a href="https://luma.com/stanford-founders-events" target="_blank" rel="noopener">Luma event page</a>,
+          or find us on <a href="https://www.instagram.com/stanford_founders/" target="_blank" rel="noopener">Instagram</a> and
+          <a href="https://www.linkedin.com/company/stanford-founders/" target="_blank" rel="noopener">LinkedIn</a>.
+          Members get the WhatsApp community link after joining.</p>
+
         <h3>Membership</h3>
         <p>Open to current Stanford graduate students working on a company,
           or seriously considering one. Apply via the form on this page or the
@@ -40,12 +50,12 @@
 
         <h3>Sponsorship</h3>
         <p>Sector mixers and Demo Day are sponsor-supported. Email
-          <a href="mailto:stanfordfounders@stanford.edu">stanfordfounders@stanford.edu</a>
+          <a href="mailto:hello@intake.stanfordfoundersclub.com">hello@intake.stanfordfoundersclub.com</a>
           for the current deck and pricing.</p>
 
         <h3>Press</h3>
         <p>For Demo Day press credentials and media inquiries, email
-          <a href="mailto:stanfordfounders@stanford.edu">stanfordfounders@stanford.edu</a>
+          <a href="mailto:hello@intake.stanfordfoundersclub.com">hello@intake.stanfordfoundersclub.com</a>
           with "Press" in the subject.</p>
       </div>
 
@@ -63,6 +73,10 @@
         <div class="field">
           <label for="email">Stanford email</label>
           <input id="email" name="email" type="email" required autocomplete="email" placeholder="you@stanford.edu">
+        </div>
+        <div class="field hp" aria-hidden="true">
+          <label for="website">Website</label>
+          <input id="website" name="website" type="text" tabindex="-1" autocomplete="off">
         </div>
         <div class="field">
           <label for="message">Message</label>

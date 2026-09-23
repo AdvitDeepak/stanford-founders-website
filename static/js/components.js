@@ -1,6 +1,6 @@
 /**
  * components.js: loads shared header/footer, marks the active nav link,
- * and wires the contact form to the Google Apps Script endpoint.
+ * and wires the contact form to the intake inbox endpoint.
  */
 (function () {
   function load(placeholderId, file) {
@@ -22,9 +22,8 @@
     });
   }
 
-  // Apps Script endpoint owns rolling-membership + contact form rows.
-  // Update this when the form integration is migrated to the new officer.
-  var APPS_SCRIPT_URL = window.SFS_FORM_ENDPOINT || '';
+  // Set in contact.html. Points at the club inbox's public contact route.
+  var FORM_ENDPOINT = window.SFS_FORM_ENDPOINT || '';
 
   function wireContactForm() {
     var form = document.getElementById('contact-form');
@@ -35,8 +34,8 @@
 
     form.addEventListener('submit', function (e) {
       e.preventDefault();
-      if (!APPS_SCRIPT_URL) {
-        status.textContent = 'Form endpoint not configured. Email stanfordfounders@stanford.edu instead.';
+      if (!FORM_ENDPOINT) {
+        status.textContent = 'Form endpoint not configured. Email hello@intake.stanfordfoundersclub.com instead.';
         status.className = 'form-status err';
         return;
       }
@@ -45,10 +44,20 @@
       if (btn) { btn.disabled = true; btn.textContent = 'Sending…'; }
 
       var data = new FormData(form);
-      var params = new URLSearchParams();
-      data.forEach(function (v, k) { params.append(k, v); });
+      var payload = {};
+      data.forEach(function (v, k) { payload[k] = v; });
 
-      fetch(APPS_SCRIPT_URL + '?' + params.toString(), { method: 'GET', mode: 'no-cors' })
+      fetch(FORM_ENDPOINT, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload)
+      })
+        .then(function (r) {
+          if (r.ok) return;
+          return r.json().catch(function () { return {}; }).then(function (j) {
+            throw new Error(j.error || 'Request failed');
+          });
+        })
         .then(function () {
           status.textContent = 'Sent. We\'ll be in touch.';
           status.className = 'form-status ok';
@@ -58,8 +67,9 @@
             if (btn) { btn.disabled = false; btn.textContent = originalLabel; }
           }, 2000);
         })
-        .catch(function () {
-          status.textContent = 'Error. Try again, or email stanfordfounders@stanford.edu.';
+        .catch(function (err) {
+          status.textContent = (err && err.message ? err.message + '. ' : 'Error. ') +
+            'Try again, or email hello@intake.stanfordfoundersclub.com.';
           status.className = 'form-status err';
           if (btn) { btn.disabled = false; btn.textContent = 'Try again'; }
         });
