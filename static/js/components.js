@@ -36,7 +36,7 @@
     form.addEventListener('submit', function (e) {
       e.preventDefault();
       if (!APPS_SCRIPT_URL) {
-        status.textContent = 'Form endpoint not configured. Email stanfordfounders@stanford.edu instead.';
+        status.textContent = 'Form endpoint not configured. Email hello@intake.stanfordfoundersclub.com instead.';
         status.className = 'form-status err';
         return;
       }
@@ -59,7 +59,7 @@
           }, 2000);
         })
         .catch(function () {
-          status.textContent = 'Error. Try again, or email stanfordfounders@stanford.edu.';
+          status.textContent = 'Error. Try again, or email hello@intake.stanfordfoundersclub.com.';
           status.className = 'form-status err';
           if (btn) { btn.disabled = false; btn.textContent = 'Try again'; }
         });
