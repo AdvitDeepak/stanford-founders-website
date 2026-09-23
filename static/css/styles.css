@@ -1080,6 +1080,7 @@ section.body.tight { padding: 56px 0; }
   padding: 36px;
 }
 .field { margin-bottom: 20px; }
+.field.hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
 .field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 20px; }
 .field-row .field { margin-bottom: 0; }
 .field label {

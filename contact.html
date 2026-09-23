@@ -7,11 +7,9 @@
 <meta name="description" content="Reach out to Stanford Founders. Membership applications, sponsor inquiries, speaker requests, press.">
 <link rel="stylesheet" href="static/css/styles.css">
 <script>
-  // Apps Script web app endpoint owned by Advit Deepak (per Instructions.pdf,
-  // section "Contact Form Integration"). Submissions append rows to the
-  // shared "Contact Form Submissions" Sheet. To migrate, deploy a new
-  // Apps Script web app and replace the URL below.
-  window.SFS_FORM_ENDPOINT = 'https://script.google.com/macros/s/AKfycbwXJcHdKMc2tqan-EB0M_MIHWRmNrghI8qbAWoS2syckAGLValMl0Y8r60lF1bQ0efP/exec';
+  // Contact form posts to the club's intake inbox (stanford-founders-internal-dashboard,
+  // POST /api/contact). Submissions show up as conversations the team replies to from the app.
+  window.SFS_FORM_ENDPOINT = 'https://www.stanfordfoundersclub.com/api/contact';
 </script>
 <script src="static/js/components.js" defer></script>
 </head>
@@ -75,6 +73,10 @@
         <div class="field">
           <label for="email">Stanford email</label>
           <input id="email" name="email" type="email" required autocomplete="email" placeholder="you@stanford.edu">
+        </div>
+        <div class="field hp" aria-hidden="true">
+          <label for="website">Website</label>
+          <input id="website" name="website" type="text" tabindex="-1" autocomplete="off">
         </div>
         <div class="field">
           <label for="message">Message</label>
