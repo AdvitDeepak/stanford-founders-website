@@ -22,6 +22,32 @@
     });
   }
 
+  function wireNavToggle() {
+    var nav = document.querySelector('nav.primary');
+    var toggle = nav && nav.querySelector('.nav-toggle');
+    if (!toggle) return;
+
+    function setOpen(open) {
+      nav.classList.toggle('open', open);
+      toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+    }
+
+    toggle.addEventListener('click', function () {
+      setOpen(!nav.classList.contains('open'));
+    });
+    // Tapping a link, pressing Escape, or tapping outside closes the menu.
+    nav.addEventListener('click', function (e) {
+      if (e.target.closest && e.target.closest('.links a')) setOpen(false);
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') setOpen(false);
+    });
+    document.addEventListener('click', function (e) {
+      if (nav.classList.contains('open') && !nav.contains(e.target)) setOpen(false);
+    });
+  }
+
   // Set in contact.html. Points at the club inbox's public contact route.
   var FORM_ENDPOINT = window.SFS_FORM_ENDPOINT || '';
 
@@ -82,6 +108,7 @@
       load('footer-placeholder', 'footer.html')
     ]).then(function () {
       activeLink();
+      wireNavToggle();
       wireContactForm();
     });
   });

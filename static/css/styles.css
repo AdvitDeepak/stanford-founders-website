@@ -20,6 +20,7 @@
   --white: #FFFFFF;
   --hairline: #ECECEC;
   --max: 1200px;
+  --nav-h: 69px; /* sticky nav.primary height; sticky/scroll offsets key off it */
 }
 
 html { scroll-behavior: smooth; }
@@ -91,6 +92,9 @@ img { max-width: 100%; display: block; }
 .utility .social a:hover { color: var(--white); }
 
 /* ── Primary navigation ── */
+/* The shared header is injected into this placeholder; display:contents lets
+   nav.primary participate in body layout so its position:sticky actually sticks. */
+#header-placeholder { display: contents; }
 nav.primary {
   position: sticky;
   top: 0;
@@ -136,6 +140,28 @@ nav.primary .links .cta {
   padding: 9px 16px;
 }
 nav.primary .links .cta:hover { background: var(--parchment); color: var(--cardinal); }
+
+/* Hamburger toggle: hidden on desktop, shown ≤880px where the inline
+   links collapse into a dropdown panel (see the 880px media query). */
+nav.primary .nav-toggle {
+  display: none;
+  background: none;
+  border: 0;
+  padding: 8px;
+  cursor: pointer;
+}
+nav.primary .nav-toggle .bar {
+  display: block;
+  width: 22px;
+  height: 2px;
+  border-radius: 1px;
+  background: var(--white);
+  margin: 4px 0;
+  transition: transform 0.2s, opacity 0.2s;
+}
+nav.primary.open .nav-toggle .bar:nth-child(1) { transform: translateY(6px) rotate(45deg); }
+nav.primary.open .nav-toggle .bar:nth-child(2) { opacity: 0; }
+nav.primary.open .nav-toggle .bar:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
 
 /* ── Buttons ── */
 .btn {
@@ -1206,7 +1232,29 @@ footer.site .legal {
   .final-cta h2 { font-size: 34px; }
   section.body { padding: 64px 0; }
   footer.site .grid { grid-template-columns: 1fr 1fr; gap: 32px; }
-  nav.primary .links a:not(.cta) { display: none; }
+  nav.primary .nav-toggle { display: block; }
+  nav.primary .links {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 2px;
+    background: var(--cardinal);
+    border-top: 1px solid rgba(255,255,255,0.12);
+    padding: 12px 20px 20px;
+    box-shadow: 0 16px 28px rgba(0,0,0,0.22);
+  }
+  nav.primary.open .links { display: flex; }
+  nav.primary .links a { padding: 14px 12px; font-size: 16px; border-radius: 8px; }
+  nav.primary .links .cta {
+    margin-left: 0;
+    margin-top: 10px;
+    justify-content: center;
+    text-align: center;
+  }
   .utility .wrap { flex-direction: column; align-items: flex-start; gap: 8px; }
   .utility .demo-day { flex-wrap: wrap; }
   .prose-grid { grid-template-columns: 1fr; gap: 16px; }
