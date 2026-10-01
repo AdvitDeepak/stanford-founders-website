@@ -3,8 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!-- Page hidden: History and Mission & Values moved to the homepage. Remove
-     this redirect (and restore the About link in header.html) to bring it back. -->
+<!-- Page hidden: History and Mission & Values moved to the homepage. To bring it
+     back, remove this whole redirect block (script, style, and meta refresh) and
+     restore the About link in header.html. -->
+<script>location.replace('index.html');</script>
+<style>body { display: none !important; }</style>
 <meta http-equiv="refresh" content="0; url=index.html">
 <meta name="robots" content="noindex">
 <title>About | Stanford Founders</title>

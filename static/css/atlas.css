@@ -68,7 +68,7 @@
 .atlas-app .preset:hover{background:var(--at-ink);color:var(--at-ground);transform:translateY(-2px)}
 
 /* ---------- filter panel ---------- */
-.atlas-app .panel{background:var(--at-surface);border:1px solid var(--at-line);border-radius:18px;padding:clamp(18px,3vw,30px);margin-bottom:10px;scroll-margin-top:16px;display:flex;flex-direction:column;gap:22px}
+.atlas-app .panel{background:var(--at-surface);border:1px solid var(--at-line);border-radius:18px;padding:clamp(18px,3vw,30px);margin-bottom:10px;scroll-margin-top:calc(var(--nav-h,0px) + 16px);display:flex;flex-direction:column;gap:22px}
 .atlas-app .panel-top{display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap}
 .atlas-app .panel-top h2{font-family:var(--at-display);font-weight:700;font-size:clamp(22px,2.6vw,30px);letter-spacing:-.02em;margin:0;line-height:1.1}
 .atlas-app .panel-top h2 b{font-weight:800;font-variant-numeric:tabular-nums}
@@ -87,7 +87,7 @@
 .atlas-app .clear{all:unset;cursor:pointer;font-size:14px;color:var(--at-muted);text-decoration:underline;text-underline-offset:3px}
 .atlas-app .clear:hover{color:var(--at-ink)}
 .atlas-app .clear:focus-visible{outline:2px solid var(--at-s1)}
-.atlas-app .strip{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--at-ground);border-bottom:1px solid var(--at-line);padding-block:10px;display:flex;align-items:center;gap:8px 12px;flex-wrap:wrap;min-height:48px}
+.atlas-app .strip{position:sticky;top:var(--nav-h,0px);z-index:5;background:var(--at-ground);border-bottom:1px solid var(--at-line);padding-block:10px;display:flex;align-items:center;gap:8px 12px;flex-wrap:wrap;min-height:48px}
 .atlas-app .strip .ct{font-family:var(--at-display);font-weight:700;font-size:18px;font-variant-numeric:tabular-nums;margin-right:4px}
 .atlas-app .strip .ct small{font-family:var(--at-body);font-weight:400;font-size:13px;color:var(--at-muted);margin-left:5px}
 .atlas-app .tok{all:unset;cursor:pointer;font-size:13px;padding:3px 10px;border-radius:999px;background:var(--at-ink);color:var(--at-ground);display:inline-flex;gap:6px;align-items:center}
@@ -97,7 +97,7 @@
 .atlas-app .strip .edit{margin-left:auto}
 
 /* ---------- stages ---------- */
-.atlas-app .stage{padding-block:36px 8px;scroll-margin-top:72px}
+.atlas-app .stage{padding-block:36px 8px;scroll-margin-top:calc(var(--nav-h,0px) + 64px)}
 .atlas-app .stage-head{display:flex;gap:14px;align-items:center;margin-bottom:18px}
 .atlas-app .stage-num{font-family:var(--at-display);font-weight:800;font-size:clamp(44px,6vw,72px);line-height:.8;color:var(--sc);letter-spacing:-.04em;font-variant-numeric:tabular-nums}
 .atlas-app .stage-mark{width:14px;height:14px;border-radius:50%;background:var(--sc);flex:none}
@@ -221,3 +221,6 @@
 .atlas-app td a:hover{color:var(--at-accent)}
 .atlas-app :focus-visible{outline-color:var(--at-accent)}
 .atlas-app .x:focus-visible,.atlas-app .leg:focus-visible,.atlas-app .clear:focus-visible,.atlas-app .tok:focus-visible,.atlas-app .card:focus-visible{outline-color:var(--at-accent)}
+/* The drawer is modal: keep it and its scrim above the sticky site nav (z-index 100). */
+.atlas-app .scrim{z-index:999}
+.atlas-app .drawer{z-index:1000}
