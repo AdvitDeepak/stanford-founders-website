@@ -46,11 +46,9 @@ let wideLayout=null;
 function buildMap(){
   const wide=!matchMedia("(max-width: 640px)").matches;
   if(wide===wideLayout) return; wideLayout=wide;
-  const W=wide?1200:400,H=wide?390:770,sp=wide?12.5:10,R=wide?7:5.5;
-  const centers=STAGES.map((s,i)=>wide?{x:110+196*i,y:i%2?245:150}:(()=>{const row=Math.floor(i/2),col=row%2?1-(i%2):i%2;return{x:col?298:102,y:135+row*245}})());
-  let d="M"+centers[0].x+" "+centers[0].y;
-  for(let i=1;i<centers.length;i++){const a=centers[i-1],b=centers[i];d+=wide?` C ${a.x+98} ${a.y}, ${b.x-98} ${b.y}, ${b.x} ${b.y}`:(a.y===b.y?` L ${b.x} ${b.y}`:` C ${a.x} ${a.y+120}, ${b.x} ${b.y-120}, ${b.x} ${b.y}`);}
-  let h=`<path class="route" d="${d}"/><path class="route-draw" id="rd" d="${d}"/>`;
+  const W=wide?1200:400,H=wide?390:600,sp=wide?12.5:10,R=wide?7:6;
+  const centers=STAGES.map((s,i)=>wide?{x:110+196*i,y:i%2?245:150}:{x:i%2?300:100,y:105+Math.floor(i/2)*200});
+  let h="";
   STAGES.forEach((s,i)=>{
     const c=centers[i],items=DATA.filter(r=>r.stage===s.n),rad=sp*Math.sqrt(items.length)+R+10;
     const ly=wide?(i%2?c.y+rad+30:c.y-rad-16):c.y-rad-14;
@@ -63,7 +61,6 @@ function buildMap(){
     });
   });
   const svg=$("svg");svg.classList.toggle("narrow",!wide);svg.setAttribute("viewBox",`0 0 ${W} ${H}`);svg.innerHTML=h;
-  const rd=$("rd");if(rd&&rd.getTotalLength)rd.style.setProperty("--len",Math.ceil(rd.getTotalLength()));
   paintDots();
 }
 function paintDots(){const ok=new Set(DATA.filter(matches).map(r=>r._i));document.querySelectorAll(".dot").forEach(d=>d.classList.toggle("off",!ok.has(+d.dataset.i)));}

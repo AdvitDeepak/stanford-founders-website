@@ -40,11 +40,9 @@
 /* ---------- map ---------- */
 .atlas-app .map{position:relative;margin-bottom:12px}
 .atlas-app .map svg{display:block;width:100%;height:auto;overflow:visible}
-.atlas-app .route{fill:none;stroke:var(--at-line);stroke-width:2;stroke-dasharray:3 9;stroke-linecap:round}
-.atlas-app .route-draw{fill:none;stroke:var(--at-ink);stroke-width:2;stroke-linecap:round;opacity:.55}
 .atlas-app .terr{fill:var(--sc);opacity:.07;transition:opacity .4s}
 .atlas-app .terr-label{font-family:var(--at-display);font-weight:700;font-size:17px;fill:var(--at-ink)}
-.atlas-app svg.narrow .terr-label{font-size:13px}
+.atlas-app svg.narrow .terr-label{font-size:15px}
 .atlas-app .terr-num{font-family:var(--at-mono);font-size:12px;fill:var(--sc);letter-spacing:.08em}
 .atlas-app .dot{fill:var(--sc);cursor:pointer;transform-box:fill-box;transform-origin:center;transition:opacity .45s var(--at-ease),r .25s var(--at-ease)}
 .atlas-app .dot.off{opacity:.13}
@@ -173,18 +171,16 @@
 @keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
 @keyframes pop{from{transform:scale(0)}60%{transform:scale(1.25)}to{transform:scale(1)}}
 @keyframes drift{from{transform:translate(0,0)}to{transform:translate(var(--dx),var(--dy))}}
-@keyframes draw{from{stroke-dashoffset:var(--len)}to{stroke-dashoffset:0}}
 @media (prefers-reduced-motion:no-preference){
   .atlas-app h1 span{animation:rise .7s var(--at-ease) both;animation-delay:calc(var(--w)*90ms)}
   .atlas-app .lede,.atlas-app .eyebrow{animation:rise .7s var(--at-ease) both;animation-delay:.35s}
-  .atlas-app .route-draw{stroke-dasharray:var(--len);animation:draw 2.2s var(--at-ease) both .2s}
   .atlas-app .dot{animation:pop .55s var(--at-ease) both;animation-delay:calc(var(--d)*1ms)}
   .atlas-app .dotg{animation:drift var(--t) ease-in-out infinite alternate;animation-delay:calc(var(--d)*-7ms)}
   .atlas-app .terr-g{animation:rise .6s var(--at-ease) both;animation-delay:calc(var(--n)*180ms + 200ms)}
   .atlas-app .leg{animation:rise .6s var(--at-ease) both;animation-delay:calc(var(--n)*90ms + 900ms)}
   .atlas-app .card.in{animation:rise .45s var(--at-ease) both;animation-delay:calc(var(--i)*35ms)}
 }
-@media (prefers-reduced-motion:reduce){.atlas-app *{transition:none!important;animation:none!important}.atlas-app .route-draw{display:none}}
+@media (prefers-reduced-motion:reduce){.atlas-app *{transition:none!important;animation:none!important}}
 
 @media (max-width:900px){
   .atlas-app .mast{grid-template-columns:1fr;gap:14px}
@@ -194,6 +190,16 @@
   .atlas-app .stage-ct{grid-column:2}
 }
 @media (max-width:520px){.atlas-app .legend{grid-template-columns:repeat(2,minmax(0,1fr))}}
+/* Phones: the lists table becomes stacked rows instead of a sideways scroll. */
+@media (max-width:640px){
+  .atlas-app table{min-width:0}
+  .atlas-app thead{display:none}
+  .atlas-app table,.atlas-app tbody,.atlas-app tr,.atlas-app td{display:block;width:100%}
+  .atlas-app tr{padding:14px 0;border-bottom:1px solid var(--at-line)}
+  .atlas-app td{border:0;padding:0}
+  .atlas-app td:first-child{font-weight:600;font-size:15.5px}
+  .atlas-app td:nth-child(2){color:var(--at-muted);font-size:13.5px;margin:2px 0 6px}
+}
 
 /* ---------- site integration overrides ---------- */
 .atlas-app{background:transparent;line-height:1.5;letter-spacing:-0.005em}
