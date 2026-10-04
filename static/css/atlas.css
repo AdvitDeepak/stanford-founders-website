@@ -42,7 +42,7 @@
 .atlas-app .map svg{display:block;width:100%;height:auto;overflow:visible}
 .atlas-app .terr{fill:var(--sc);opacity:.07;transition:opacity .4s}
 .atlas-app .terr-label{font-family:var(--at-display);font-weight:700;font-size:17px;fill:var(--at-ink)}
-.atlas-app svg.narrow .terr-label{font-size:15px}
+.atlas-app svg.narrow .terr-label{font-size:17px}
 .atlas-app .terr-num{font-family:var(--at-mono);font-size:12px;fill:var(--sc);letter-spacing:.08em}
 .atlas-app .dot{fill:var(--sc);cursor:pointer;transform-box:fill-box;transform-origin:center;transition:opacity .45s var(--at-ease),r .25s var(--at-ease)}
 .atlas-app .dot.off{opacity:.13}

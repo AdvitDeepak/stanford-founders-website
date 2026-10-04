@@ -1000,7 +1000,7 @@ section.body.tight { padding: 56px 0; }
 .logo-grid.investors { grid-template-columns: repeat(6, 1fr); gap: 14px; }
 .logo-grid.investors .logo-cell { padding: 14px 18px; }
 .logo-grid.investors .logo-cell img { width: var(--w, 70%); max-height: 100%; }
-.logo-grid.investors .logo-cell.badge img { border-radius: 8px; }
+.logo-grid.investors .logo-cell.badge img { width: auto; height: 100%; border-radius: 8px; }
 
 @media (max-width: 880px) {
   .logo-grid.investors { grid-template-columns: repeat(4, 1fr); gap: 10px; }
