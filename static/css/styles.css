@@ -994,6 +994,24 @@ section.body.tight { padding: 56px 0; }
   padding: 36px;
 }
 
+/* Investor wall: logos carry an optical width (--w, set per logo from its
+   aspect ratio) so wide wordmarks and square marks read at a similar
+   weight. Square marks that ship on a solid background become badges. */
+.logo-grid.investors { grid-template-columns: repeat(6, 1fr); gap: 14px; }
+.logo-grid.investors .logo-cell { padding: 14px 18px; }
+.logo-grid.investors .logo-cell img { width: var(--w, 70%); max-height: 100%; }
+.logo-grid.investors .logo-cell.badge img { width: auto; height: 100%; border-radius: 8px; }
+
+@media (max-width: 880px) {
+  .logo-grid.investors { grid-template-columns: repeat(4, 1fr); gap: 10px; }
+  .logo-grid.investors .logo-cell { padding: 10px 12px; }
+}
+@media (max-width: 480px) {
+  .logo-grid.investors { grid-template-columns: repeat(3, 1fr); gap: 8px; }
+  .logo-grid.investors .logo-cell { padding: 8px 10px; border-radius: 8px; }
+  .logo-grid.investors .logo-cell.badge img { border-radius: 6px; }
+}
+
 @media (max-width: 880px) {
   .logo-grid { grid-template-columns: repeat(3, 1fr); }
   .logo-grid.large { grid-template-columns: repeat(3, 1fr); }
@@ -1001,7 +1019,9 @@ section.body.tight { padding: 56px 0; }
 }
 @media (max-width: 480px) {
   .logo-grid { grid-template-columns: repeat(2, 1fr); }
-  .logo-grid.large { grid-template-columns: repeat(2, 1fr); }
+  /* Sponsors match the 3-up investor wall on phones. */
+  .logo-grid.large { grid-template-columns: repeat(3, 1fr); gap: 8px; }
+  .logo-grid.large .logo-cell { padding: 16px 12px; border-radius: 8px; }
 }
 
 /* ── Placeholder block (for upcoming content like Demo Day recap) ── */
@@ -1278,6 +1298,58 @@ footer.site .legal {
   footer.site .grid { grid-template-columns: 1fr; }
   .team-grid { grid-template-columns: 1fr; }
   .contact-form { padding: 24px; }
+}
+
+/* ── Mobile refinements ──
+   Shared gutters, tighter vertical rhythm, 16px form text (stops iOS
+   zoom-on-focus), full-width tap targets, and long strings that wrap. */
+html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+.contact-info, footer.site { overflow-wrap: anywhere; }
+
+@media (max-width: 880px) {
+  .wrap, .wrap-narrow { padding: 0 24px; }
+  .page-hero.light .wrap { padding-top: 56px; padding-bottom: 40px; }
+  .section-header { margin-bottom: 36px; }
+  .section-header h2 { font-size: 28px; }
+  .section-header p { font-size: 17px; }
+  .final-cta { padding: 64px 0; }
+  .final-cta p { font-size: 17px; margin-bottom: 28px; }
+  footer.site { padding: 56px 0 32px; }
+  footer.site .grid { margin-bottom: 40px; }
+  .field input, .field textarea { font-size: 16px; }
+  .photo-band { grid-template-columns: repeat(3, 1fr); }
+  .photo-band .item { height: 180px; }
+}
+
+@media (max-width: 480px) {
+  .wrap, .wrap-narrow { padding: 0 20px; }
+  section.body { padding: 48px 0; }
+  section.body.tight { padding: 36px 0; }
+  .page-hero.light .wrap { padding-top: 40px; padding-bottom: 32px; }
+  .page-hero p { font-size: 17px; }
+  .section-header { margin-bottom: 28px; }
+  .section-header h2 { font-size: 26px; }
+  .stats { padding: 44px 0; }
+  .stats-grid { gap: 28px 20px; }
+  .hero-photo { min-height: 0; }
+  .hero-photo .wrap { min-height: 0; padding-top: 56px; padding-bottom: 64px; }
+  .hero-photo p.lede { font-size: 17px; margin-bottom: 28px; }
+  .hero-photo .actions .btn,
+  .final-cta .actions .btn { flex: 1 1 100%; justify-content: center; }
+  .photo-band .item { height: 120px; }
+  .service-row { padding: 36px 0; }
+  .luma-card { grid-template-columns: 1fr auto; gap: 16px; padding: 24px; }
+  .luma-card h3 { font-size: 21px; }
+  .luma-card .arrow { width: 44px; height: 44px; font-size: 18px; }
+  .contact-form { padding: 20px; }
+  footer.site .brand-block img { height: 84px; }
+}
+
+/* Smallest phones: keep the club name on one line in the top bar. */
+@media (max-width: 360px) {
+  nav.primary .brand { gap: 8px; }
+  nav.primary .brand img { height: 32px; }
+  nav.primary .brand .name { font-size: 14px; white-space: nowrap; }
 }
 
 /* ──────────────────────────────────────────────────────────────
