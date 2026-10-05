@@ -158,10 +158,10 @@
 
 /* ---------- lists + foot ---------- */
 .atlas-app .lists{margin-top:56px;border-top:1px solid var(--at-line);padding-top:32px}
-.atlas-app .lists h2{font-family:var(--at-display);font-size:28px;letter-spacing:-.02em;margin:0 0 4px}
+.atlas-app .lists h2{font-family:var(--at-display);font-size:28px;letter-spacing:-.02em;margin:0 0 16px}
 .atlas-app .lists .sub{color:var(--at-muted);margin:0 0 16px;max-width:66ch}
 .atlas-app .scroll{overflow-x:auto}
-.atlas-app table{width:100%;border-collapse:collapse;font-size:14.5px;min-width:640px}
+.atlas-app table{width:100%;max-width:860px;border-collapse:collapse;font-size:14.5px}
 .atlas-app th{text-align:left;font-family:var(--at-body);font-size:13px;color:var(--at-muted);font-weight:600;padding:8px 14px 8px 0;border-bottom:1px solid var(--at-line)}
 .atlas-app td{padding:10px 14px 10px 0;border-bottom:1px solid var(--at-line);vertical-align:top}
 .atlas-app .foot{margin-top:36px;color:var(--at-muted);font-size:13.5px;max-width:78ch}
@@ -198,7 +198,7 @@
   .atlas-app tr{padding:14px 0;border-bottom:1px solid var(--at-line)}
   .atlas-app td{border:0;padding:0}
   .atlas-app td:first-child{font-weight:600;font-size:15.5px}
-  .atlas-app td:nth-child(2){color:var(--at-muted);font-size:13.5px;margin:2px 0 6px}
+  .atlas-app td:nth-child(2){color:var(--at-muted);font-size:13.5px;margin-top:2px}
 }
 
 /* ---------- site integration overrides ---------- */
