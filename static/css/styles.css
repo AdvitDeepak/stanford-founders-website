@@ -1019,7 +1019,9 @@ section.body.tight { padding: 56px 0; }
 }
 @media (max-width: 480px) {
   .logo-grid { grid-template-columns: repeat(2, 1fr); }
-  .logo-grid.large { grid-template-columns: repeat(2, 1fr); }
+  /* Sponsors match the 3-up investor wall on phones. */
+  .logo-grid.large { grid-template-columns: repeat(3, 1fr); gap: 8px; }
+  .logo-grid.large .logo-cell { padding: 16px 12px; border-radius: 8px; }
 }
 
 /* ── Placeholder block (for upcoming content like Demo Day recap) ── */
@@ -1341,6 +1343,13 @@ html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
   .luma-card .arrow { width: 44px; height: 44px; font-size: 18px; }
   .contact-form { padding: 20px; }
   footer.site .brand-block img { height: 84px; }
+}
+
+/* Smallest phones: keep the club name on one line in the top bar. */
+@media (max-width: 360px) {
+  nav.primary .brand { gap: 8px; }
+  nav.primary .brand img { height: 32px; }
+  nav.primary .brand .name { font-size: 14px; white-space: nowrap; }
 }
 
 /* ──────────────────────────────────────────────────────────────

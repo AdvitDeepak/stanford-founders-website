@@ -46,12 +46,18 @@ let wideLayout=null;
 function buildMap(){
   const wide=!matchMedia("(max-width: 640px)").matches;
   if(wide===wideLayout) return; wideLayout=wide;
-  const W=wide?1200:400,H=wide?390:600,sp=wide?12.5:10,R=wide?7:6;
-  const centers=STAGES.map((s,i)=>wide?{x:110+196*i,y:i%2?245:150}:{x:i%2?300:100,y:105+Math.floor(i/2)*200});
+  const sp=wide?12.5:10,R=wide?7:6;
+  const rads=STAGES.map(s=>sp*Math.sqrt(DATA.filter(r=>r.stage===s.n).length)+R+10);
+  // Laptop: one straight row. Phone: two columns. Labels share a baseline per row.
+  const rowOf=i=>wide?0:Math.floor(i/2),rows=wide?1:Math.ceil(STAGES.length/2);
+  const rowRad=[...Array(rows)].map((_,k)=>Math.max(...rads.filter((_,i)=>rowOf(i)===k)));
+  const labelH=wide?40:34,gap=wide?0:28,rowH=k=>labelH+2*rowRad[k];
+  const rowTop=k=>{let y=8;for(let j=0;j<k;j++)y+=rowH(j)+gap;return y;};
+  const W=wide?1200:400,H=rowTop(rows-1)+rowH(rows-1)+8;
+  const centers=STAGES.map((s,i)=>{const k=rowOf(i);return{x:wide?100+200*i:(i%2?300:100),y:rowTop(k)+labelH+rowRad[k],ly:rowTop(k)+labelH-14};});
   let h="";
   STAGES.forEach((s,i)=>{
-    const c=centers[i],items=DATA.filter(r=>r.stage===s.n),rad=sp*Math.sqrt(items.length)+R+10;
-    const ly=wide?(i%2?c.y+rad+30:c.y-rad-16):c.y-rad-14;
+    const c=centers[i],items=DATA.filter(r=>r.stage===s.n),rad=rads[i],ly=c.ly;
     h+=`<g class="terr-g" style="--n:${i}" data-s="${s.n}"><circle class="terr" data-t="${s.n}" cx="${c.x}" cy="${c.y}" r="${rad}"/>
       <text class="terr-label" x="${c.x}" y="${ly}" text-anchor="middle">${esc(s.short)}</text></g>`;
     items.forEach((r,k)=>{
