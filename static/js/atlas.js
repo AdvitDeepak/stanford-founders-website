@@ -155,7 +155,6 @@ $("legend").addEventListener("focusin",e=>{const l=e.target.closest(".leg");if(l
 $("legend").addEventListener("focusout",()=>highlight(0));
 
 /* ---------- boot ---------- */
-$("total").textContent=DATA.length;
 $("legend").innerHTML=STAGES.map((s,i)=>`<button type="button" class="leg" data-s="${s.n}" style="--n:${i}"><span class="nm">${esc(s.short)}</span></button>`).join("");
 $("presets").innerHTML=PRESETS.map((p,i)=>`<button type="button" class="preset" data-p="${i}">${esc(p.name)}</button>`).join("");
 document.querySelector("#lists tbody").innerHTML=LISTS.map(l=>`<tr><td><a href="${esc(l.url)}" target="_blank" rel="noopener noreferrer">${esc(l.name)}</a></td><td>${esc(l.by)}</td><td>${esc(l.what)}</td></tr>`).join("");
