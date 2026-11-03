@@ -1,5 +1,110 @@
 [
  {
+  "shape": "Bento Grid",
+  "theme": "ink",
+  "axes": "light/grotesk-sans/chromatic-cardinal",
+  "hero": "Mosaic",
+  "nav": "edge-aligned",
+  "footer": "mast",
+  "imagery": "photographs",
+  "photos": [
+   "networking-portrait",
+   "pitch-night-crowd",
+   "demo-pitch",
+   "magic-room-table"
+  ],
+  "entry": "redesign/d3-campus/index.html",
+  "fingerprint": "d3-campus",
+  "sections": [
+   "hero wall",
+   "stats",
+   "history split",
+   "programmes bento",
+   "demo day band",
+   "mission and values",
+   "doors",
+   "footer"
+  ],
+  "signature": "quote tile in a photo wall, colour variant d3-campus",
+  "waived": [
+   "83",
+   "49b"
+  ],
+  "prompt": "iterate D with more colour and logo",
+  "date": "2026-11-03",
+  "mode": "build"
+ },
+ {
+  "shape": "Bento Grid",
+  "theme": "ink",
+  "axes": "light/grotesk-sans/chromatic-cardinal",
+  "hero": "Mosaic",
+  "nav": "edge-aligned",
+  "footer": "mast",
+  "imagery": "photographs",
+  "photos": [
+   "networking-portrait",
+   "pitch-night-crowd",
+   "demo-pitch",
+   "magic-room-table"
+  ],
+  "entry": "redesign/d2-navy/index.html",
+  "fingerprint": "d2-navy",
+  "sections": [
+   "hero wall",
+   "stats",
+   "history split",
+   "programmes bento",
+   "demo day band",
+   "mission and values",
+   "doors",
+   "footer"
+  ],
+  "signature": "quote tile in a photo wall, colour variant d2-navy",
+  "waived": [
+   "83",
+   "49b"
+  ],
+  "prompt": "iterate D with more colour and logo",
+  "date": "2026-11-03",
+  "mode": "build"
+ },
+ {
+  "shape": "Bento Grid",
+  "theme": "ink",
+  "axes": "light/grotesk-sans/chromatic-cardinal",
+  "hero": "Mosaic",
+  "nav": "edge-aligned",
+  "footer": "mast",
+  "imagery": "photographs",
+  "photos": [
+   "networking-portrait",
+   "pitch-night-crowd",
+   "demo-pitch",
+   "magic-room-table"
+  ],
+  "entry": "redesign/d1-cardinal/index.html",
+  "fingerprint": "d1-cardinal",
+  "sections": [
+   "hero wall",
+   "stats",
+   "history split",
+   "programmes bento",
+   "demo day band",
+   "mission and values",
+   "doors",
+   "footer"
+  ],
+  "signature": "quote tile in a photo wall, colour variant d1-cardinal",
+  "waived": [
+   "83",
+   "49b"
+  ],
+  "prompt": "iterate D with more colour and logo",
+  "date": "2026-11-03",
+  "mode": "build"
+ },
+ {
   "shape": "custom",
   "theme": "custom",
   "axes": "dark/grotesk-sans/warm",

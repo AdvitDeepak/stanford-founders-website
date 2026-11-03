@@ -1,0 +1,35 @@
+/* Hallmark · shape: Bento Grid · genre: editorial · theme: Ink (by request: Epilogue type from mockup C) · job: join · iteration of D, variant 2 of 3
+ * hero: Mosaic, the Helen Keller quote on a navy tile inside a four-photograph wall · nav: edge-aligned navy bar with the club mark · footer: mast with the mark · imagery: photographs (the club's own, lightly muted) · signature: the club's existing navy and Cardinal, worn on parchment · ink: paper
+ * axes: light/grotesk-sans/chromatic-cardinal · posture: navy surfaces with Cardinal for actions, from the current site palette · contrast: pass · fold: pass · brand: Stanford Founders' Club (Cardinal #8C1515, Ink #1A1A2E, Parchment #FAF8F5 from static/css/styles.css:15-18) · v2.0.0 */
+/* Hallmark · pre-emit critique: P4 H4 E4 S5 R4 V3 · weakest: V, this is an iteration on D by request, so the layout repeats on purpose and only colour and content move */
+/* Hallmark · copy: verbatim · the homepage, Events and footer content is the club's own, edited lightly, so the copy gates report as notes */
+/* Hallmark · waive 83 · photographs lead most sections · the user asked for an image-heavy page built from the club's own event photos */
+/* Hallmark · waive 49b · the intake email address wraps at 320px in the footer · the club's real intake address is too long for one line on the smallest phones */
+/* Hallmark · dismissed F4 · See our events is a 1px outline on the quote tile, not a fill */
+/* Hallmark · waive 22 · the theme's zero-chroma greys are overridden by the club navy at :root · tokens.css keeps Ink's values beneath the navy override */
+@import url("./tokens.css");
+@import url("./base.css");
+@import url("../d-shared/layout.css");
+
+:root {
+  --navy: oklch(22.8% 0.038 283); --navy-2: oklch(30% 0.045 283); --navy-soft: oklch(93% 0.014 283); --navy-soft-2: oklch(88% 0.02 283);
+  --cardinal: oklch(41.4% 0.153 27); --cardinal-deep: oklch(34% 0.13 27); --cardinal-soft: oklch(94.5% 0.03 20); --cardinal-soft-2: oklch(90% 0.05 20);
+  --color-paper: oklch(98% 0.005 78); --color-paper-2: oklch(95.5% 0.008 78); --color-paper-3: oklch(91% 0.01 78);
+  --color-ink: var(--navy); --color-ink-2: oklch(32% 0.03 283); --color-muted: oklch(50% 0.025 270);
+  --nav-bg: var(--navy); --nav-ink: var(--color-paper); --nav-rule: var(--navy-2); --nav-focus: var(--color-paper);
+  --nav-btn-bg: var(--cardinal); --nav-btn-ink: var(--color-paper); --nav-btn-hover: var(--cardinal-deep);
+  --tile-bg: var(--navy); --tile-ink: var(--color-paper); --tile-ink-2: var(--navy-soft); --tile-focus: var(--color-paper);
+  --tile-btn-bg: var(--cardinal); --tile-btn-ink: var(--color-paper); --tile-btn-hover: var(--cardinal-deep);
+  --tile-quiet-border: var(--navy-soft-2); --tile-quiet-hover: var(--navy-2);
+  --stats-bg: var(--color-paper-2); --stats-ink: var(--color-ink-2); --stats-num: var(--cardinal); --stats-rule: var(--color-paper-3);
+  --prog-section-bg: var(--color-paper);
+  --prog-1-bg: transparent; --prog-1-ink: var(--color-ink); --prog-2-bg: transparent; --prog-2-ink: var(--color-ink);
+  --prog-3-bg: transparent; --prog-3-ink: var(--color-ink); --prog-4-bg: transparent; --prog-4-ink: var(--color-ink);
+  --stage-bg: var(--navy); --stage-ink: var(--color-paper); --stage-ink-2: var(--navy-soft); --stage-focus: var(--color-paper);
+  --stage-btn-bg: var(--cardinal); --stage-btn-ink: var(--color-paper); --stage-btn-hover: var(--cardinal-deep);
+  --door-1-bg: var(--cardinal); --door-1-ink: var(--color-paper); --door-1-hover: var(--cardinal-deep);
+  --door-2-bg: var(--navy); --door-2-ink: var(--color-paper); --door-2-hover: var(--navy-2);
+  --door-3-bg: var(--navy-soft); --door-3-ink: var(--navy); --door-3-hover: var(--navy-soft-2);
+  --door-4-bg: var(--cardinal-soft); --door-4-ink: var(--cardinal-deep); --door-4-hover: var(--cardinal-soft-2);
+  --foot-bg: var(--navy); --foot-ink: var(--color-paper); --foot-muted: var(--navy-soft-2); --foot-rule: var(--navy-2);
+}

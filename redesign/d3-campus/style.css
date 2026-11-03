@@ -1,0 +1,38 @@
+/* Hallmark · shape: Bento Grid · genre: editorial · theme: Ink (by request: Epilogue type from mockup C) · job: join · iteration of D, variant 3 of 3
+ * hero: Mosaic, the Helen Keller quote on a pale Cardinal tile inside a four-photograph wall · nav: edge-aligned white bar with the Cardinal mark · footer: Cardinal mast with the mark · imagery: photographs (the club's own, lightly muted) · signature: each programme keeps its own colour, from its tile to its door · ink: paper
+ * axes: light/grotesk-sans/chromatic-cardinal · posture: Cardinal plus four pale programme tints that code co-founder matching, programming, sector mixers and investor access · contrast: pass · fold: pass · brand: Stanford Founders' Club (Cardinal #8C1515, static/css/styles.css:15; tints derived for this page, not Stanford's palette) · v2.0.0 */
+/* Hallmark · pre-emit critique: P4 H4 E4 S5 R3 V3 · weakest: R, five colours, so each tint appears only where its programme does and type stays ink */
+/* Hallmark · copy: verbatim · the homepage, Events and footer content is the club's own, edited lightly, so the copy gates report as notes */
+/* Hallmark · waive 22 · ink and greys at zero chroma · the photo wall is printed in plain black and the colour comes from the programme tints */
+/* Hallmark · waive 83 · photographs lead most sections · the user asked for an image-heavy page built from the club's own event photos */
+/* Hallmark · waive 49b · the intake email address wraps at 320px in the footer · the club's real intake address is too long for one line on the smallest phones */
+/* Hallmark · dismissed F4 · See our events is a 1px outline on the quote tile, not a fill */
+@import url("./tokens.css");
+@import url("./base.css");
+@import url("../d-shared/layout.css");
+
+:root {
+  --cardinal: oklch(41.4% 0.153 27); --cardinal-deep: oklch(34% 0.13 27); --cardinal-soft: oklch(94% 0.032 20); --cardinal-soft-2: oklch(89% 0.05 20);
+  --rose: oklch(92% 0.045 15); --rose-ink: oklch(34% 0.11 15); --rose-2: oklch(88% 0.06 15);
+  --sky: oklch(92% 0.04 235); --sky-ink: oklch(33% 0.09 245); --sky-2: oklch(88% 0.055 235);
+  --sage: oklch(92% 0.045 150); --sage-ink: oklch(32% 0.07 155); --sage-2: oklch(88% 0.06 150);
+  --sand: oklch(92% 0.055 85); --sand-ink: oklch(36% 0.07 70); --sand-2: oklch(88% 0.07 85);
+  --nav-bg: var(--color-paper); --nav-ink: var(--color-ink); --nav-rule: var(--color-rule); --nav-focus: var(--color-focus);
+  --nav-btn-bg: var(--cardinal); --nav-btn-ink: var(--color-paper); --nav-btn-hover: var(--cardinal-deep);
+  --tile-bg: var(--cardinal-soft); --tile-ink: var(--cardinal-deep); --tile-ink-2: var(--color-ink-2); --tile-focus: var(--color-focus);
+  --tile-btn-bg: var(--cardinal); --tile-btn-ink: var(--color-paper); --tile-btn-hover: var(--cardinal-deep);
+  --tile-quiet-border: var(--cardinal-soft-2); --tile-quiet-hover: var(--cardinal-soft-2);
+  --stats-bg: var(--color-paper); --stats-ink: var(--color-ink-2); --stats-num: var(--cardinal); --stats-rule: var(--color-rule);
+  --prog-section-bg: var(--color-paper-2);
+  --prog-1-bg: var(--rose); --prog-1-ink: var(--rose-ink); --prog-2-bg: var(--sky); --prog-2-ink: var(--sky-ink);
+  --prog-3-bg: var(--sage); --prog-3-ink: var(--sage-ink); --prog-4-bg: var(--sand); --prog-4-ink: var(--sand-ink);
+  --stage-bg: var(--color-paper); --stage-ink: var(--color-ink); --stage-ink-2: var(--color-ink-2); --stage-focus: var(--color-focus);
+  --stage-btn-bg: var(--cardinal); --stage-btn-ink: var(--color-paper); --stage-btn-hover: var(--cardinal-deep);
+  --door-1-bg: var(--rose); --door-1-ink: var(--rose-ink); --door-1-hover: var(--rose-2);
+  --door-2-bg: var(--sky); --door-2-ink: var(--sky-ink); --door-2-hover: var(--sky-2);
+  --door-3-bg: var(--sage); --door-3-ink: var(--sage-ink); --door-3-hover: var(--sage-2);
+  --door-4-bg: var(--sand); --door-4-ink: var(--sand-ink); --door-4-hover: var(--sand-2);
+  --foot-bg: var(--cardinal); --foot-ink: var(--color-paper); --foot-muted: var(--cardinal-soft-2); --foot-rule: var(--cardinal-deep);
+}
+.b { --b-pad: var(--space-md) var(--space-md) var(--space-lg); }
+.stage { border-block: var(--rule-hair) solid var(--color-rule); }

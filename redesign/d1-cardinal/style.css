@@ -1,0 +1,33 @@
+/* Hallmark · shape: Bento Grid · genre: editorial · theme: Ink (by request: Epilogue type from mockup C) · job: join · iteration of D, variant 1 of 3
+ * hero: Mosaic, the Helen Keller quote on a Cardinal tile inside a four-photograph wall · nav: edge-aligned Cardinal bar with the club mark · footer: mast with the mark · imagery: photographs (the club's own, lightly muted) · signature: the Cardinal quote tile among the club's own nights · ink: paper
+ * axes: light/grotesk-sans/chromatic-cardinal · posture: committed (Cardinal as surface on the nav, the quote tile, the Demo Day band and the first door) · contrast: pass · fold: pass · brand: Stanford Founders' Club (Cardinal #8C1515, static/css/styles.css:15; mark from assets/logo/SFC_White.svg) · v2.0.0 */
+/* Hallmark · pre-emit critique: P4 H4 E4 S5 R4 V3 · weakest: V, this is an iteration on D by request, so the layout repeats on purpose and only colour and content move */
+/* Hallmark · copy: verbatim · the homepage, Events and footer content is the club's own, edited lightly, so the copy gates report as notes */
+/* Hallmark · waive 22 · ink and greys at zero chroma · the photo wall is printed in plain black with Cardinal as the one colour */
+/* Hallmark · waive 83 · photographs lead most sections · the user asked for an image-heavy page built from the club's own event photos */
+/* Hallmark · waive 49b · the intake email address wraps at 320px in the footer · the club's real intake address is too long for one line on the smallest phones */
+/* Hallmark · dismissed F4 · See our events is a 1px outline on the quote tile, not a fill */
+
+@import url("./tokens.css");
+@import url("./base.css");
+@import url("../d-shared/layout.css");
+
+:root {
+  --cardinal: oklch(41.4% 0.153 27); --cardinal-deep: oklch(34% 0.13 27); --cardinal-soft: oklch(94.5% 0.03 20); --cardinal-soft-2: oklch(90% 0.05 20);
+  --nav-bg: var(--cardinal); --nav-ink: var(--color-paper); --nav-rule: var(--cardinal-deep); --nav-focus: var(--color-paper);
+  --nav-btn-bg: var(--color-paper); --nav-btn-ink: var(--cardinal); --nav-btn-hover: var(--cardinal-soft);
+  --tile-bg: var(--cardinal); --tile-ink: var(--color-paper); --tile-ink-2: var(--cardinal-soft); --tile-focus: var(--color-paper);
+  --tile-btn-bg: var(--color-paper); --tile-btn-ink: var(--cardinal); --tile-btn-hover: var(--cardinal-soft);
+  --tile-quiet-border: var(--cardinal-soft-2); --tile-quiet-hover: var(--cardinal-deep);
+  --stats-bg: var(--cardinal-soft); --stats-ink: var(--cardinal-deep); --stats-num: var(--cardinal); --stats-rule: var(--cardinal-soft-2);
+  --prog-section-bg: var(--color-paper);
+  --prog-1-bg: transparent; --prog-1-ink: var(--color-ink); --prog-2-bg: transparent; --prog-2-ink: var(--color-ink);
+  --prog-3-bg: transparent; --prog-3-ink: var(--color-ink); --prog-4-bg: transparent; --prog-4-ink: var(--color-ink);
+  --stage-bg: var(--cardinal); --stage-ink: var(--color-paper); --stage-ink-2: var(--cardinal-soft); --stage-focus: var(--color-paper);
+  --stage-btn-bg: var(--color-paper); --stage-btn-ink: var(--cardinal); --stage-btn-hover: var(--cardinal-soft);
+  --door-1-bg: var(--cardinal); --door-1-ink: var(--color-paper); --door-1-hover: var(--cardinal-deep);
+  --door-2-bg: var(--cardinal-soft); --door-2-ink: var(--cardinal-deep); --door-2-hover: var(--cardinal-soft-2);
+  --door-3-bg: var(--cardinal-soft); --door-3-ink: var(--cardinal-deep); --door-3-hover: var(--cardinal-soft-2);
+  --door-4-bg: var(--cardinal-soft); --door-4-ink: var(--cardinal-deep); --door-4-hover: var(--cardinal-soft-2);
+  --foot-bg: var(--color-ink); --foot-ink: var(--color-paper); --foot-muted: var(--color-paper-3); --foot-rule: var(--color-ink-2);
+}
