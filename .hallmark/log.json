@@ -13,6 +13,117 @@
    "demo-pitch",
    "magic-room-table"
   ],
+  "entry": "redesign/d6-parchment/index.html",
+  "fingerprint": "d6-parchment",
+  "sections": [
+   "hero wall",
+   "stats",
+   "history split",
+   "programmes bento",
+   "demo day frame",
+   "mission and values",
+   "four doors",
+   "footer"
+  ],
+  "signature": "welcome on open paper in a photo wall, d6-parchment",
+  "waived": [
+   "22",
+   "44c",
+   "49b",
+   "83"
+  ],
+  "prompt": "slight variants of D, white space, reserved colour",
+  "date": "2026-11-03",
+  "mode": "build"
+ },
+ {
+  "shape": "Bento Grid",
+  "theme": "ink",
+  "axes": "light/grotesk-sans/chromatic-cardinal",
+  "hero": "Mosaic",
+  "nav": "edge-aligned",
+  "footer": "mast",
+  "imagery": "photographs",
+  "photos": [
+   "networking-portrait",
+   "pitch-night-crowd",
+   "demo-pitch",
+   "magic-room-table"
+  ],
+  "entry": "redesign/d5-photo/index.html",
+  "fingerprint": "d5-photo",
+  "sections": [
+   "hero wall",
+   "stats",
+   "history split",
+   "programmes bento",
+   "demo day frame",
+   "mission and values",
+   "four doors",
+   "footer"
+  ],
+  "signature": "welcome on open paper in a photo wall, d5-photo",
+  "waived": [
+   "22",
+   "44c",
+   "49b",
+   "83"
+  ],
+  "prompt": "slight variants of D, white space, reserved colour",
+  "date": "2026-11-03",
+  "mode": "build"
+ },
+ {
+  "shape": "Bento Grid",
+  "theme": "ink",
+  "axes": "light/grotesk-sans/chromatic-cardinal",
+  "hero": "Mosaic",
+  "nav": "edge-aligned",
+  "footer": "mast",
+  "imagery": "photographs",
+  "photos": [
+   "networking-portrait",
+   "pitch-night-crowd",
+   "demo-pitch",
+   "magic-room-table"
+  ],
+  "entry": "redesign/d4-accent/index.html",
+  "fingerprint": "d4-accent",
+  "sections": [
+   "hero wall",
+   "stats",
+   "history split",
+   "programmes bento",
+   "demo day frame",
+   "mission and values",
+   "four doors",
+   "footer"
+  ],
+  "signature": "welcome on open paper in a photo wall, d4-accent",
+  "waived": [
+   "22",
+   "44c",
+   "49b",
+   "83"
+  ],
+  "prompt": "slight variants of D, white space, reserved colour",
+  "date": "2026-11-03",
+  "mode": "build"
+ },
+ {
+  "shape": "Bento Grid",
+  "theme": "ink",
+  "axes": "light/grotesk-sans/chromatic-cardinal",
+  "hero": "Mosaic",
+  "nav": "edge-aligned",
+  "footer": "mast",
+  "imagery": "photographs",
+  "photos": [
+   "networking-portrait",
+   "pitch-night-crowd",
+   "demo-pitch",
+   "magic-room-table"
+  ],
   "entry": "redesign/d3-campus/index.html",
   "fingerprint": "d3-campus",
   "sections": [
