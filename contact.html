@@ -3,93 +3,70 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Contact | Stanford Founders</title>
-<meta name="description" content="Reach out to Stanford Founders. Membership applications, sponsor inquiries, speaker requests, press.">
-<link rel="stylesheet" href="static/css/styles.css?v=20261005">
+<title>Contact | Stanford Founders' Club</title>
+<meta name="description" content="Apply to Stanford Founders' Club, sponsor a mixer, or get in touch.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="static/css/site.css?v=20261103">
+<script src="static/js/components.js?v=20261103" defer></script>
 <script>
   // Contact form posts to the club's intake inbox (stanford-founders-internal-dashboard,
   // POST /api/contact). Submissions show up as conversations the team replies to from the app.
   window.SFS_FORM_ENDPOINT = 'https://www.stanfordfoundersclub.com/api/contact';
 </script>
-<script src="static/js/components.js?v=20261005" defer></script>
 </head>
-<body data-page="contact">
+<body class="page-contact" data-page="contact">
+<a class="skip" href="#main">Skip to content</a>
 
 <div id="header-placeholder"></div>
 
-<header class="page-hero light">
-  <div class="wrap">
-    <h1>Apply, sponsor, or get in touch</h1>
-    <p>Membership applications go through the form below. Sponsors, speakers, and press should email us directly.</p>
-  </div>
-</header>
+<main id="main">
 
-<section class="body">
-  <div class="wrap-narrow">
-    <div class="contact-grid">
+  <section class="page-head">
+    <div class="container">
+      <h1>Apply, sponsor, or get in touch</h1>
+      <p class="lead">Membership applications go through the form below. Sponsors, speakers, and press should email us directly.</p>
+    </div>
+  </section>
 
+  <section class="contact">
+    <div class="container contact-grid">
       <div class="contact-info">
-        <h3>Reach us</h3>
-        <p>Email
-          <a href="mailto:hello@intake.stanfordfoundersclub.com">hello@intake.stanfordfoundersclub.com</a><br>
-          Text or WhatsApp <a href="tel:+18884333195">(888) 433-3195</a> &mdash;
-          <a href="https://wa.me/18884333195" target="_blank" rel="noopener">open in WhatsApp</a></p>
-        <p>Stay in the loop: join the
-          <a href="https://mailman.stanford.edu/mailman/listinfo/stanfordfoundersannouncement" target="_blank" rel="noopener">announcement mailing list</a>,
-          follow our <a href="https://luma.com/stanford-founders-events" target="_blank" rel="noopener">Luma event page</a>,
-          or find us on <a href="https://www.instagram.com/stanford_founders/" target="_blank" rel="noopener">Instagram</a> and
-          <a href="https://www.linkedin.com/company/stanford-founders/" target="_blank" rel="noopener">LinkedIn</a>.
-          Members get the WhatsApp community link after joining.</p>
-
-        <h3>Membership</h3>
-        <p>Open to current Stanford graduate students working on a company,
-          or seriously considering one. Apply via the form on this page or the
-          <a href="https://forms.gle/29HpRs3yAWa1Dg757" target="_blank" rel="noopener">Google form</a>.
-          Rolling review.</p>
-
-        <h3>Sponsorship</h3>
-        <p>Sector mixers and Demo Day are sponsor-supported. Email
-          <a href="mailto:hello@intake.stanfordfoundersclub.com">hello@intake.stanfordfoundersclub.com</a>
-          for the current deck and pricing.</p>
-
-        <h3>Press</h3>
-        <p>For Demo Day press credentials and media inquiries, email
-          <a href="mailto:hello@intake.stanfordfoundersclub.com">hello@intake.stanfordfoundersclub.com</a>
-          with "Press" in the subject.</p>
+        <div class="info-block">
+          <h2>Reach us</h2>
+          <p>Email <a href="mailto:hello@intake.stanfordfoundersclub.com">hello@intake.stanfordfoundersclub.com</a>, or text or WhatsApp <a href="tel:+18884333195">(888) 433-3195</a>.</p>
+          <p>Stay in the loop on the <a href="https://mailman.stanford.edu/mailman/listinfo/stanfordfoundersannouncement">mailing list</a>, <a href="https://luma.com/stanford-founders-events">Luma</a>, <a href="https://www.instagram.com/stanford_founders/">Instagram</a> and <a href="https://www.linkedin.com/company/stanford-founders/">LinkedIn</a>. Members get the WhatsApp community link after joining.</p>
+        </div>
+        <div class="info-block">
+          <h2>Membership</h2>
+          <p>Open to current Stanford graduate students working on a company, or seriously considering one. Apply with the form here or the <a href="https://forms.gle/29HpRs3yAWa1Dg757">Google form</a>. Rolling review.</p>
+        </div>
+        <div class="info-block">
+          <h2>Sponsorship</h2>
+          <p>Sector mixers and Demo Day are sponsor-supported. Email us for the current deck and pricing.</p>
+        </div>
+        <div class="info-block">
+          <h2>Press</h2>
+          <p>For Demo Day press credentials and media inquiries, email us with &ldquo;Press&rdquo; in the subject.</p>
+        </div>
       </div>
 
-      <form id="contact-form" class="contact-form" autocomplete="on">
+      <form id="contact-form" class="form" autocomplete="on">
         <div class="field-row">
-          <div class="field">
-            <label for="firstName">First name</label>
-            <input id="firstName" name="firstName" type="text" required autocomplete="given-name">
-          </div>
-          <div class="field">
-            <label for="lastName">Last name</label>
-            <input id="lastName" name="lastName" type="text" required autocomplete="family-name">
-          </div>
+          <div class="field"><label for="firstName">First name</label><input id="firstName" name="firstName" type="text" required autocomplete="given-name"></div>
+          <div class="field"><label for="lastName">Last name</label><input id="lastName" name="lastName" type="text" required autocomplete="family-name"></div>
         </div>
-        <div class="field">
-          <label for="email">Email</label>
-          <input id="email" name="email" type="email" required autocomplete="email" placeholder="you@example.com">
-        </div>
-        <div class="field hp" aria-hidden="true">
-          <label for="website">Website</label>
-          <input id="website" name="website" type="text" tabindex="-1" autocomplete="off">
-        </div>
-        <div class="field">
-          <label for="message">Message</label>
-          <textarea id="message" name="message" required placeholder="Tell us about what you're working on, or which inquiry you're sending (membership, sponsor, speaker, press)."></textarea>
-        </div>
-        <button type="submit" class="btn primary full">Send</button>
-        <div class="form-status" aria-live="polite"></div>
+        <div class="field"><label for="email">Email</label><input id="email" name="email" type="email" required autocomplete="email" placeholder="you@example.com"></div>
+        <div class="field hp" aria-hidden="true"><label for="website">Website</label><input id="website" name="website" type="text" tabindex="-1" autocomplete="off"></div>
+        <div class="field"><label for="message">Message</label><textarea id="message" name="message" required placeholder="Tell us what you're working on, or which inquiry you're sending: membership, sponsor, speaker, or press."></textarea></div>
+        <button type="submit" class="btn btn--primary">Send</button>
+        <p class="form-status" aria-live="polite"></p>
       </form>
-
     </div>
-  </div>
-</section>
+  </section>
 
+</main>
 <div id="footer-placeholder"></div>
-
 </body>
 </html>

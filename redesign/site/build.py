@@ -223,7 +223,8 @@ page("events.html", head("Events & Services | Stanford Founders' Club", "Weekly 
       <div class="photo-row">
         <div class="photo" data-slot="dd1"><img src="../img/dd25-pitch-hyperthread.jpg" alt="A founder pitching at Demo Day" loading="lazy"></div>
         <div class="photo" data-slot="dd2"><img src="../img/dd25-investors-vests.jpg" alt="Investors in the audience at Demo Day" loading="lazy"></div>
-        <div class="photo" data-slot="dd3"><img src="../img/demo-day-group-2026.jpg" alt="Organizers and founders together on stage at the Spring 2026 Demo Day" loading="lazy"></div>
+        <div class="photo" data-slot="dd3"><img src="../img/dd25-pitch-podium.jpg" alt="A founder at the podium at Demo Day" loading="lazy"></div>
+        <div class="photo" data-slot="dd4"><img src="../img/demo-day-group-2026.jpg" alt="Organizers and founders together on stage at the Spring 2026 Demo Day" loading="lazy"></div>
       </div>
       <div class="close-row">
         <div class="close-text">
@@ -262,7 +263,7 @@ page("events.html", head("Events & Services | Stanford Founders' Club", "Weekly 
 
 # ── resources: the Atlas markup, unchanged, inside the D5 frame ──────
 rs = (REPO / "resources.html").read_text()
-atlas = re.search(r'(<div class="atlas-app">.*?\n</div>)\n  </div>\n</section>', rs, re.S).group(1)
+atlas = re.search(r'(<div class="atlas-app">.*?</aside>\n</div>)', rs, re.S).group(1)
 page("resources.html", head("Resources | Stanford Founders' Club", "Explore Stanford's entrepreneurship resources: clubs, courses, funds, accelerators, and support offices for Stanford founders, grouped by the kind of help they give.",
                             '<link rel="stylesheet" href="../../static/css/atlas.css">\n') + '<body class="page-resources">\n' + nav("resources") + f"""
 <main id="main">

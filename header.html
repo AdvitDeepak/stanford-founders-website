@@ -1,6 +1,8 @@
 <!--
   Demo Day announcement bar. Hidden after the May 2026 Demo Day; restore
   (and update the date, venue, and Luma link) when the next one is scheduled.
+  Note: static/css/site.css has no styles for .utility yet; add them when
+  this bar comes back.
 
 <div class="utility">
   <div class="wrap">
@@ -17,13 +19,13 @@
 </div>
 -->
 
-<nav class="primary">
-  <div class="wrap">
+<nav class="primary" aria-label="Primary">
+  <div class="container nav-inner">
     <a href="index.html" class="brand">
-      <img src="assets/logo/SFC_White.svg" alt="Stanford Founders' Club">
-      <span class="name">Stanford Founders' Club</span>
+      <img src="assets/logo/sfc-mark-ink.png" alt="" width="233" height="256">
+      <span>Stanford Founders&rsquo; Club</span>
     </a>
-    <button class="nav-toggle" type="button" hidden aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">
+    <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">
       <span class="bar"></span>
       <span class="bar"></span>
       <span class="bar"></span>
@@ -41,7 +43,7 @@
       <a href="team.html" data-page="team">Team</a>
       -->
       <a href="contact.html" data-page="contact">Contact</a>
-      <a href="https://forms.gle/29HpRs3yAWa1Dg757" target="_blank" rel="noopener" class="cta" data-page="join">Join Now</a>
+      <a href="https://forms.gle/29HpRs3yAWa1Dg757" target="_blank" rel="noopener" class="btn btn--primary btn--small" data-page="join">Join Now</a>
     </div>
   </div>
 </nav>
