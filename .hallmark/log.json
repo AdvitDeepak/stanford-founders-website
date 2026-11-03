@@ -1,5 +1,103 @@
 [
  {
+  "shape": "custom",
+  "theme": "custom",
+  "axes": "dark/grotesk-sans/warm",
+  "hero": "Index",
+  "nav": "edge-aligned",
+  "footer": "colophon block",
+  "imagery": "photographs",
+  "photos": [
+   "many"
+  ],
+  "entry": "redesign/contact/index.html",
+  "fingerprint": "contact-r2",
+  "sections": [
+   "hero strip",
+   "dinners rail",
+   "talks rail",
+   "demo day rail with figures",
+   "ways rows",
+   "colophon"
+  ],
+  "signature": "contact-sheet rails per kind of night",
+  "waived": [
+   "83"
+  ],
+  "prompt": "Stanford Founders image-heavy revamp",
+  "date": "2026-11-03",
+  "mode": "build"
+ },
+ {
+  "shape": "custom",
+  "theme": "custom",
+  "axes": "light/slab-serif/warm",
+  "hero": "Poster",
+  "nav": "edge-aligned",
+  "footer": "statement",
+  "imagery": "photographs",
+  "photos": [
+   "networking-portrait",
+   "magic-room-table",
+   "sophie-fireside",
+   "demo-panel-stage",
+   "pitch-night-hosting",
+   "pitch-night-crowd",
+   "dd25-tresidder-wide"
+  ],
+  "entry": "redesign/essay/index.html",
+  "fingerprint": "essay-r2",
+  "sections": [
+   "cover",
+   "bleed chapter",
+   "pair",
+   "triptych",
+   "bleed chapter with figures",
+   "three doors",
+   "statement footer"
+  ],
+  "signature": "photo essay chapters from dinner to Demo Day",
+  "waived": [
+   "83"
+  ],
+  "prompt": "Stanford Founders image-heavy revamp",
+  "date": "2026-11-03",
+  "mode": "build"
+ },
+ {
+  "shape": "Bento Grid",
+  "theme": "ink",
+  "axes": "light/grotesk-sans/chromatic-cardinal",
+  "hero": "Mosaic",
+  "nav": "edge-aligned",
+  "footer": "mast",
+  "imagery": "photographs",
+  "photos": [
+   "magic-room-table",
+   "pitch-night-crowd",
+   "demo-pitch",
+   "networking-portrait"
+  ],
+  "entry": "redesign/mosaic/index.html",
+  "fingerprint": "mosaic-r2",
+  "sections": [
+   "hero photo wall",
+   "bento of programmes",
+   "demo day cinema frame and figures",
+   "four doors with photos",
+   "mast"
+  ],
+  "signature": "headline pinned in a wall of the club photographs",
+  "waived": [
+   "22",
+   "44c",
+   "83"
+  ],
+  "prompt": "Stanford Founders image-heavy revamp",
+  "date": "2026-11-03",
+  "mode": "build"
+ },
+ {
   "shape": "Split Studio",
   "theme": "ink",
   "axes": "light/grotesk-sans/chromatic-cardinal",
