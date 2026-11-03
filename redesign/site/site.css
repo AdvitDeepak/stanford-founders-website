@@ -25,6 +25,7 @@
   --foot-bg: var(--color-ink); --foot-ink: var(--color-paper); --foot-muted: var(--color-paper-3); --foot-rule: var(--color-ink-2);
 }
 [data-slot] > img { filter: saturate(1.06) contrast(1.02); }
+.foot-brand .foot-lockup { width: 200px; height: auto; }
 .bar-links a[aria-current="page"] { text-decoration: underline; text-decoration-color: var(--color-ink); text-underline-offset: 0.3em; }
 
 /* ── homepage: the quiet about section below the stats ── */
