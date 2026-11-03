@@ -1,0 +1,93 @@
+[
+ {
+  "shape": "Split Studio",
+  "theme": "ink",
+  "axes": "light/grotesk-sans/chromatic-cardinal",
+  "hero": "Counter",
+  "nav": "edge-aligned",
+  "footer": "mast",
+  "imagery": "photographs",
+  "photos": [
+   "magic-room-table",
+   "dd25-investors-vests"
+  ],
+  "entry": "redesign/ink/index.html",
+  "fingerprint": "36f9e8",
+  "sections": [
+   "hero counter desk",
+   "split photo",
+   "steps",
+   "timetable",
+   "split photo",
+   "contact well",
+   "mast"
+  ],
+  "signature": "the front desk: four ways in with access tags",
+  "waived": [
+   "22",
+   "49b"
+  ],
+  "prompt": "Stanford Founders Club homepage revamp",
+  "date": "2026-11-03",
+  "mode": "build"
+ },
+ {
+  "shape": "Conversational FAQ",
+  "theme": "overprint",
+  "axes": "light/grotesk-heavy/cool",
+  "hero": "Poster",
+  "nav": "slab",
+  "footer": "colophon block",
+  "imagery": "photographs",
+  "photos": [
+   "dd25-audience-focused",
+   "magic-room-table"
+  ],
+  "entry": "redesign/overprint/index.html",
+  "fingerprint": "eee9fe",
+  "sections": [
+   "hero poster",
+   "demo day bill",
+   "faq",
+   "split photo",
+   "ruled table",
+   "colophon"
+  ],
+  "signature": "Demo Day as a two-pass bill",
+  "waived": [],
+  "prompt": "Stanford Founders Club homepage revamp",
+  "date": "2026-11-03",
+  "mode": "build"
+ },
+ {
+  "shape": "Marquee Hero",
+  "theme": "newsprint",
+  "axes": "light/slab-serif/warm",
+  "hero": "Corridor",
+  "nav": "floating bar",
+  "footer": "statement",
+  "imagery": "photographs",
+  "photos": [
+   "magic-room-table",
+   "dd25-tresidder-wide"
+  ],
+  "entry": "redesign/newsprint/index.html",
+  "fingerprint": "5cd48f",
+  "sections": [
+   "hero",
+   "front page columns",
+   "figures",
+   "listings",
+   "demo day split",
+   "membership rows",
+   "footer statement"
+  ],
+  "signature": "broadsheet front: origin story in justified columns under the lead photo",
+  "waived": [
+   "44c"
+  ],
+  "prompt": "Stanford Founders Club homepage revamp",
+  "date": "2026-11-03",
+  "mode": "build"
+ }
+]
